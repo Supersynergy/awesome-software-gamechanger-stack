@@ -1,0 +1,40 @@
+name: 🚀 Add Tool
+description: Suggest a gamechanger tool for inclusion
+title: "[TOOL] "
+labels: ["new-tool", "needs-review"]
+body:
+  - type: input
+    id: tool-name
+    attributes:
+      label: Tool name + GitHub URL
+      placeholder: e.g. sonic-rs — https://github.com/cloudwego/sonic-rs
+    validations:
+      required: true
+  - type: input
+    id: replaces
+    attributes:
+      label: Replaces (legacy tool)
+      placeholder: e.g. serde_json
+    validations:
+      required: true
+  - type: textarea
+    id: benchmark
+    attributes:
+      label: Benchmark (with source URL)
+      placeholder: |
+        "1.5x faster than simd-json on Twitter benchmark (796µs vs 1061µs)"
+        Source: https://github.com/cloudwego/sonic-rs#benchmarks
+    validations:
+      required: true
+  - type: textarea
+    id: when-not
+    attributes:
+      label: When NOT to use
+      placeholder: e.g. "Cross-platform builds without SIMD support"
+    validations:
+      required: true
+  - type: input
+    id: production-proof
+    attributes:
+      label: Production proof
+      placeholder: e.g. "ByteDance production since 2023, handles X req/day"

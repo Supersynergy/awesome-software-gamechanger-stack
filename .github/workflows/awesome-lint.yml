@@ -1,0 +1,8 @@
+name: Awesome Lint
+on: [push, pull_request]
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: max-mapper/awesome-lint@v0.18.0
