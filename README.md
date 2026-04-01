@@ -38,6 +38,7 @@ Every entry here has a story like that. Let's go.
 | `pip + virtualenv + poetry` | [uv] | 100× faster · one Rust binary |
 | `flake8 + black + isort` | [Ruff] | 300K lines linted in 0.3s |
 | `npm + webpack` | [Bun] | 25× faster install · 4× faster startup |
+| `Rollup + esbuild` | [Rolldown] | 25× faster · unified Rust · Vite 8 default |
 | `Postgres + Redis + Mongo` | [SurrealDB] | one binary · graph + vector + SQL |
 | `Pinecone` | [Qdrant] | 4× faster filtered search · self-hostable |
 | `Prometheus` (at scale) | [VictoriaMetrics] | 7× compression · no cardinality limits |
@@ -948,17 +949,64 @@ bun test             # test runner built-in
 
 ---
 
-### [Vite](https://github.com/vitejs/vite) `TypeScript` `71K ⭐` · [docs](https://vitejs.dev) · [benchmarks](https://vitejs.dev/guide/why.html)
+### [Vite 8](https://github.com/vitejs/vite) `TypeScript` `71K ⭐` · [docs](https://vitejs.dev) · [blog](https://vitejs.dev/blog/) · [v8 release](https://vitejs.dev/blog/announcing-vite8)
 
-> **Native ES modules in dev, Rollup in prod.** No bundling during development — the browser requests modules on demand. HMR in <50ms. Cold start in <300ms regardless of project size.
+> **Vite 8 (March 2026): Rolldown is now the default bundler.** The esbuild + Rollup split is over — Vite 8 uses [Rolldown](https://rolldown.rs) internally, giving you a unified Rust bundler that's 25× faster than Rollup+esbuild while keeping full Rollup plugin compatibility.
+
+```bash
+# Vite 8 — zero migration from v7, Rolldown transparent
+npm create vite@latest my-app
+# HMR in <50ms · Cold start <300ms · Build 25x faster than Webpack
+```
 
 **Why NOT Webpack:** Webpack bundles everything before you can see anything. On a 1,000-module project, cold start takes 30-90 seconds. Vite serves files as-is via native ESM — no bundling step.
 
-**Why NOT Create React App:** CRA is officially deprecated (March 2023). It uses Webpack under the hood and hasn't been maintained. Vite is the official successor recommended by the React team.
+**Why NOT Create React App:** CRA is officially deprecated (March 2023). It uses Webpack under the hood. Vite is the official successor recommended by the React team.
 
 **Top alternatives:**
-1. **[esbuild](https://github.com/evanw/esbuild)** `Go` `40K ⭐` — 10-100× faster than Webpack for pure bundling. Vite actually uses esbuild internally for dependency pre-bundling. Use esbuild directly for library builds and CLI tools.
-2. **[Turbopack](https://github.com/vercel/turbo)** `Rust` — Vercel's Webpack successor, built into Next.js 14+. Best if you're on the Next.js ecosystem. Trade-off: Next.js only, not framework-agnostic.
+1. **[Farm](https://github.com/farm-fe/farm)** `Rust` `5.5K ⭐` — Vite-compatible Rust bundler, drop-in alternative for performance-critical setups. Builds 19K modules in 1.4s. Best if you want Vite compatibility but even more build speed.
+2. **[Turbopack](https://github.com/vercel/turbo)** `Rust` — Vercel's bundler, integrated into Next.js 15. Comparable speed to Rolldown. Trade-off: Next.js only, not standalone.
+
+---
+
+### [Rolldown](https://github.com/rolldown-rs/rolldown) `Rust` `13.3K ⭐` · [docs](https://rolldown.rs) · [benchmarks](https://rolldown.rs/#benchmarks)
+
+> **The bundler that unified esbuild + Rollup.** Rust-based, Rollup-API-compatible, esbuild-speed. Now the default engine inside Vite 8. Use directly for library builds, CLI tools, and non-Vite projects.
+
+| Bundler | 19K modules | Notes |
+|---------|:-----------:|-------|
+| **Rolldown** | **1.61s** | Vite 8 default |
+| esbuild | 1.70s | Go, no Rollup plugins |
+| Rspack | 4.07s | Webpack-compatible |
+| Rollup + esbuild | 40.10s | Old Vite 7 internals |
+
+**Why NOT esbuild alone:** esbuild is fast but has no tree-shaking for complex dynamic imports and no Rollup plugin ecosystem. Rolldown inherits all Rollup plugins AND esbuild speed.
+
+**Why NOT Rollup:** Rollup is JavaScript. Rolldown is Rollup rewritten in Rust — same API, 25× faster. If you're on Rollup today, Rolldown is a transparent upgrade.
+
+**Top alternatives:**
+1. **[esbuild](https://github.com/evanw/esbuild)** `Go` `40K ⭐` — Still faster for trivial bundles, great for CLIs/tools. Use Rolldown when you need Rollup-level code splitting + plugin ecosystem.
+2. **[OXC](https://github.com/oxc-project/oxc)** `Rust` `20.4K ⭐` — Umbrella Rust toolchain (parser + linter + formatter + bundler). OXC's bundler is the long-term play but still maturing. Watch 2026-2027.
+
+---
+
+### [VitePlus](https://github.com/voidzero-dev/vite-plus) · [voidzero](https://voidzero.dev)
+
+> **The unified Vite ecosystem layer** from VoidZero (the company Evan You founded to commercialize Vite/Rolldown/OXC). Wraps runtime + package manager + build tool into one coherent DX. Think: the "Next.js of build tooling" but framework-agnostic.
+
+**Status (April 2026):** Active development, ~5-10K stars, recent dependency and performance updates. Watch closely — this is the official upstream for where Vite + Rolldown + OXC are heading.
+
+---
+
+### [Vike](https://vike.dev) · (formerly vite-plugin-ssr) `TypeScript` · [migration guide](https://vike.dev/migration)
+
+> **Vite-native SSR/SSG/SPA router — page-by-page render mode.** The most flexible Vite meta-framework. Each page can independently be: SSR · SSG · SPA · streaming. No lock-in.
+
+**Why NOT Next.js for Vite users:** Next.js forces you to Vercel's deployment model and App Router complexity. Vike is framework-agnostic, deploys anywhere (Cloudflare Workers, AWS Lambda, Docker, Vercel), and gives you full control over rendering strategy per page.
+
+**Top alternatives:**
+1. **[SvelteKit](https://kit.svelte.dev)** — best meta-framework if you're on Svelte. Simpler than Vike for pure Svelte projects.
+2. **[Analog](https://analogjs.org)** — Angular meta-framework on Vite. Best if your org is Angular-committed.
 
 ---
 
@@ -1196,8 +1244,10 @@ CRYPTO_TLS_FIPS → aws-lc-rs      | replaces: openssl       | gain: FIPS 140-3,
 │ Python pkg mgr       │ uv (100x pip, one binary)                           │
 │ Python linter        │ Ruff (10-100x flake8+black+isort)                   │
 │ JS/TS runtime        │ Bun (25x npm, 4x Node.js startup)                   │
-│ JS bundler/HMR       │ Vite (ESM-native, <300ms cold start)                │
-│ JS linter+formatter  │ Biome (ESLint+Prettier in Rust)                     │
+│ JS bundler/HMR       │ Vite 8 + Rolldown (ESM-native, Rust bundler, <300ms)│
+│ JS bundler (library) │ Rolldown (direct) · Farm (Vite-compat alt)          │
+│ JS linter+formatter  │ Biome (ESLint+Prettier in Rust) · OXC (watch)       │
+│ Vite SSR/SSG         │ Vike (page-by-page render mode, replaces Next.js)   │
 │ Linker               │ mold (8x GNU ld, Linux) · lld (macOS)               │
 │ Metrics              │ VictoriaMetrics (7x Prometheus compression)          │
 │ Continuous profiling │ Pyroscope (always-on flame graphs)                  │
@@ -1223,6 +1273,10 @@ CRYPTO_TLS_FIPS → aws-lc-rs      | replaces: openssl       | gain: FIPS 140-3,
 | [DataFusion Comet](https://github.com/apache/datafusion-comet) | `1K` | Active | Spark plugin that accelerates Spark with DataFusion — gradual migration path |
 | [wild linker](https://github.com/davidlattimore/wild) | `4K` | Active | New Rust-native linker, may beat mold for incremental Rust builds |
 | [oxlint](https://github.com/oxc-project/oxc) | `13K` | Active | 50-100× faster ESLint; catching up fast on rule coverage |
+| [OXC bundler](https://github.com/oxc-project/oxc) | `20.4K` | Active | Full Rust JS toolchain (parser+linter+formatter+bundler) — long-term Rolldown rival |
+| [Farm](https://github.com/farm-fe/farm) | `5.5K` | ✅ Stable | Vite-compatible Rust bundler, builds 19K modules in 1.4s |
+| [VitePlus](https://github.com/voidzero-dev/vite-plus) | `~8K` | Active | VoidZero's unified Vite+Rolldown+OXC ecosystem layer |
+| [Rolldown](https://rolldown.rs) | `13.3K` | ✅ Vite 8 | Now the default Vite 8 bundler — Rollup+esbuild unified in Rust |
 | [ty (Astral)](https://github.com/astral-sh/ty) | — | Alpha | Ruff's type checker companion; will challenge mypy/pyright |
 | [Parca](https://github.com/parca-dev/parca) | `4K` | Active | eBPF continuous profiling — zero code instrumentation needed |
 | [RisingWave](https://github.com/risingwavelabs/risingwave) | `8K` | Active | Streaming SQL database — Flink replacement in Rust |
