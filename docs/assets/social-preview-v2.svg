@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640">
+  <rect width="1280" height="640" fill="#111827"/>
+  <circle cx="1120" cy="80" r="260" fill="#2563EB" opacity=".22"/>
+  <circle cx="90" cy="590" r="220" fill="#22C55E" opacity=".18"/>
+  <rect x="72" y="72" width="1136" height="496" rx="36" fill="#ffffff" opacity=".055" stroke="#ffffff" stroke-opacity=".18"/>
+  <text x="116" y="168" fill="#22C55E" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700">Docs / github.com</text>
+  <text x="116" y="288" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="72" font-weight="800">Awesome Software Gamechanger Stack</text>
+  <text x="120" y="362" fill="#F8FAFC" opacity=".82" font-family="Inter, Arial, sans-serif" font-size="28">Awesome Software Gamechanger Stack is a curated developer index for finding high-l</text>
+  <text x="120" y="470" fill="#F8FAFC" opacity=".72" font-family="Inter, Arial, sans-serif" font-size="24">Quickstart • AGENTS.md • social preview • repo polish</text>
+  <circle cx="1010" cy="320" r="170" fill="none" stroke="#22C55E" stroke-width="8" opacity=".8"/><circle cx="1010" cy="320" r="95" fill="none" stroke="#2563EB" stroke-width="8"/><path d="M1010 320l150-80" stroke="#22C55E" stroke-width="14" stroke-linecap="round"/><circle cx="1160" cy="240" r="20" fill="#22C55E"/>
+</svg>
