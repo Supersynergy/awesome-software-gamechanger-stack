@@ -1,31 +1,3 @@
-<!-- REPO-POLISH:START -->
-<p align="center">
-  <img src="docs/assets/social-preview.png" alt="Repo social preview" width="100%">
-</p>
-
-> Awesome Software Gamechanger Stack is a curated developer index for finding high-leverage AI tools fast.
-
-## Quick Start
-
-```bash
-git clone https://github.com/Supersynergy/awesome-software-gamechanger-stack.git
-cd awesome-software-gamechanger-stack
-git status --short
-```
-
-Expected result: the project runs locally or reports the next missing prerequisite directly in the terminal.
-
-## Developer Map
-
-| Need | Command |
-|---|---|
-| inspect | `git status --short` |
-
-Full verification path: `git status --short`
-
-Agent instructions live in [AGENTS.md](AGENTS.md).
-<!-- REPO-POLISH:END -->
-
 # ⚡ Awesome Software Gamechanger Stack 2026
 
 > **Drop legacy tools. Benchmarks, not vibes.**
