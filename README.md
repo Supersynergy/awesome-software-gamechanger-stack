@@ -965,7 +965,7 @@ npm create vite@latest my-app
 
 #### Top alternatives
 1. **[Farm](https://github.com/farm-fe/farm)** `Rust` `5.5K ⭐`, Vite-compatible Rust bundler, drop-in alternative for performance-critical setups. Builds 19K modules in 1.4s. Best if you want Vite compatibility but even more build speed.
-2. **[Turbopack](https://github.com/vercel/turborepo)** `Rust`, Vercel's bundler, integrated into Next.js 15. Comparable speed to Rolldown. Trade-off: Next.js only, not standalone.
+2. **[Turbopack](https://github.com/vercel/next.js/tree/canary/turbopack)** `Rust`, Vercel's bundler, shipped inside Next.js since version 15. Comparable speed to Rolldown. Trade-off: Next.js only, not standalone. (It used to live in `vercel/turbo`; that repository is now Turborepo, the monorepo build system.)
 
 ---
 
