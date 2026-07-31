@@ -1,20 +1,20 @@
-# ⚡ Awesome Software Gamechanger Stack 2026
+# Awesome Software Gamechanger Stack 2026
 
 > **Drop legacy tools. Benchmarks, not vibes.**
 > Curated from [18,000+ GitHub repos](https://github.com/rust-unofficial/awesome-rust) · 11 research agents · March 2026
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-[![Tools](https://img.shields.io/badge/tools-31%20gamechangers-blue)](#-decision-matrix)
-[![Agent Ready](https://img.shields.io/badge/agent--optimized-✓-brightgreen)](#-agent-query-api)
+[![Tools](https://img.shields.io/badge/tools-31%20gamechangers-blue)](#decision-matrix)
+[![Agent Ready](https://img.shields.io/badge/agent--optimized-✓-brightgreen)](#agent-query-api)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](../../compare)
 [![Last Updated](https://img.shields.io/badge/updated-April%202026-orange)](.)
 
 ---
 
-## 💥 WTF is this?
+## WTF is this?
 
 You're probably using 5–10 tools right now that were cutting-edge in 2015.
-This list tells you what **actually replaced them** — with proof.
+This list tells you what **actually replaced them**, with proof.
 
 > **Real example:** A team replaced `pandas` with [Polars] and their ETL pipeline went from **47 minutes → 4 minutes**. Same code, same machine. Just a different library.
 
@@ -26,7 +26,7 @@ Every entry here has a story like that. Let's go.
 
 ---
 
-## ⚡ TL;DR — Top 15 Drops Right Now
+## TL;DR: Top 15 Drops Right Now
 
 | Drop this | Use this instead | Real gain |
 |-----------|-----------------|-----------|
@@ -49,46 +49,46 @@ Every entry here has a story like that. Let's go.
 
 ---
 
-## 📑 Contents
+## Contents
 
 | Category | Quick pick |
 |----------|-----------|
-| [💥 AHA Moments](#-aha-moments--real-world-impact) | Before/after stories |
-| [🔥 JSON Parsing](#-json-parsing) | sonic-rs (Rust) · simdjson (C++) · yyjson (C) |
-| [📦 Serialization](#-serialization) | Cap'n Proto (RPC) · rkyv (Rust) · FlatBuffers (IoT) |
-| [🗄️ Query & Columnar](#️-query-engines--columnar) | DuckDB · DataFusion · Lance · Polars |
-| [🛢️ Databases — Multi-Model & Specialized](#️-databases--multi-model--specialized) | SurrealDB · TigerBeetle · Turso · Neon · ClickHouse |
-| [🧠 Vector Databases](#-vector-databases) | Qdrant · LanceDB |
-| [⚡ Async & I/O](#-async-runtime--io) | Monoio (Linux 3×) · tokio-quiche (HTTP/3) |
-| [🌐 HTTP](#-http-servers--proxies) | Pingora (proxy) · Hono (edge API) |
-| [📨 Message Queues](#-message-queues) | Iggy.rs · Redpanda · Aeron |
-| [🗃️ KV Stores](#️-key-value-stores) | Fjall · SpeedB · LMDB |
-| [🔍 Full-Text Search](#-full-text-search) | Tantivy · TypeSense |
-| [🧠 Memory Allocators](#-memory-allocators) | mimalloc · snmalloc |
+| [💥 AHA Moments](#aha-moments-real-world-impact) | Before/after stories |
+| [🔥 JSON Parsing](#json-parsing) | sonic-rs (Rust) · simdjson (C++) · yyjson (C) |
+| [📦 Serialization](#serialization) | Cap'n Proto (RPC) · rkyv (Rust) · FlatBuffers (IoT) |
+| [🗄️ Query & Columnar](#query-engines--columnar) | DuckDB · DataFusion · Lance · Polars |
+| [🛢️ Databases, Multi-Model & Specialized](#databases-multi-model--specialized) | SurrealDB · TigerBeetle · Turso · Neon · ClickHouse |
+| [🧠 Vector Databases](#vector-databases) | Qdrant · LanceDB |
+| [⚡ Async & I/O](#async-runtime--io) | Monoio (Linux 3×) · tokio-quiche (HTTP/3) |
+| [🌐 HTTP](#http-servers--proxies) | Pingora (proxy) · Hono (edge API) |
+| [📨 Message Queues](#message-queues) | Iggy.rs · Redpanda · Aeron |
+| [🗃️ KV Stores](#key-value-stores) | Fjall · SpeedB · LMDB |
+| [🔍 Full-Text Search](#full-text-search) | Tantivy · TypeSense |
+| [🧠 Memory Allocators](#memory-allocators) | mimalloc · snmalloc |
 | [#️⃣ Hash Functions](#️⃣-hash-functions) | rapidhash · BLAKE3 · AHash |
-| [🗜️ Compression](#️-compression) | LZ4 · zstd · Brotli |
-| [🔎 Regex](#-regex--string-search) | Hyperscan · RE2 · Teddy |
-| [🔐 Cryptography](#-cryptography) | aws-lc-rs · BLAKE3 |
-| [🐍 Python Toolchain](#-python-toolchain) | uv · Ruff · Maturin |
-| [⚡ JS/TS Runtime & Build](#-jsts-runtime--build) | Bun · Vite · Biome |
-| [🔗 Linkers & Build Speed](#-linkers--build-speed) | mold · lld |
-| [📊 Observability & Metrics](#-observability--metrics) | VictoriaMetrics · Pyroscope · OpenObserve |
-| [🖥️ Frontend Gamechangers](#️-frontend-gamechangers) | Astro · Svelte 5 · SolidJS |
-| [🎯 Decision Matrix](#-decision-matrix) | Agent-ready lookup |
-| [🏆 The 2026 Stack](#-the-2026-stack) | Full recommended stack |
-| [📊 Emerging Tools](#-emerging--watch-2026) | Watch list |
+| [🗜️ Compression](#compression) | LZ4 · zstd · Brotli |
+| [🔎 Regex](#regex--string-search) | Hyperscan · RE2 · Teddy |
+| [🔐 Cryptography](#cryptography) | aws-lc-rs · BLAKE3 |
+| [🐍 Python Toolchain](#python-toolchain) | uv · Ruff · Maturin |
+| [⚡ JS/TS Runtime & Build](#jsts-runtime--build) | Bun · Vite · Biome |
+| [🔗 Linkers & Build Speed](#linkers--build-speed) | mold · lld |
+| [📊 Observability & Metrics](#observability--metrics) | VictoriaMetrics · Pyroscope · OpenObserve |
+| [🖥️ Frontend Gamechangers](#frontend-gamechangers) | Astro · Svelte 5 · SolidJS |
+| [🎯 Decision Matrix](#decision-matrix) | Agent-ready lookup |
+| [🏆 The 2026 Stack](#the-2026-stack) | Full recommended stack |
+| [📊 Emerging Tools](#emerging-watch-2026) | Watch list |
 
 ---
 
-## 💥 AHA Moments — Real-World Impact
+## AHA Moments: Real-World Impact
 
 These are the "wait, WHAT?" moments that make this list worth bookmarking.
 
 ### 1. The 47-minute ETL that became 4 minutes
 A data team replaced `pandas` with [Polars] for a nightly pipeline processing 8GB of CSVs.
-- **Before:** 47 minutes, 12GB RAM peak, regularly OOM-killed
-- **After:** 4 minutes, 3.2GB RAM peak, never crashes
-- **Change:** Swap `import pandas as pd` → `import polars as pl`, adapt method names
+- Before: 47 minutes, 12GB RAM peak, regularly OOM-killed
+- After: 4 minutes, 3.2GB RAM peak, never crashes
+- Change: Swap `import pandas as pd` → `import polars as pl`, adapt method names
 
 > The reason: Polars uses lazy evaluation (never loads what it doesn't need) + SIMD multi-threaded parsing. Pandas loads everything eagerly into a single-threaded numpy array.
 
@@ -96,9 +96,9 @@ A data team replaced `pandas` with [Polars] for a nightly pipeline processing 8G
 
 ### 2. The regex that DDoS'd production
 A SaaS company ran user-supplied search patterns through PCRE. An attacker sent `(a+)+b`.
-- **Before:** PCRE took 30+ seconds on that pattern (catastrophic backtracking) → timeout → 503s cascade
-- **After:** [RE2] is linear O(n) by construction — the same pattern returns instantly
-- **Change:** One dependency swap. Zero API change.
+- Before: PCRE took 30+ seconds on that pattern (catastrophic backtracking) → timeout → 503s cascade
+- After: [RE2] is linear O(n) by construction, the same pattern returns instantly
+- Change: One dependency swap. Zero API change.
 
 > PCRE's power (backreferences, lookaheads) comes at the cost of potentially exponential runtime. If you process **any** user-supplied regex → RE2 is not optional, it's security.
 
@@ -106,19 +106,19 @@ A SaaS company ran user-supplied search patterns through PCRE. An attacker sent 
 
 ### 3. Cloudflare's 10,000-server heist
 Cloudflare rewrote their proxy from Nginx (C) to [Pingora] (Rust).
-- **Before Pingora:** ~X servers handling global traffic
-- **After Pingora:** Same traffic, −60% CPU, −70% RAM → **thousands of servers freed**
-- **Root cause:** Nginx uses process-per-connection; Pingora uses async Rust with shared connection pools → 999× fewer TCP connections for the same throughput
+- Before Pingora: ~X servers handling global traffic
+- After Pingora: Same traffic, −60% CPU, −70% RAM → **thousands of servers freed**
+- Root cause: Nginx uses process-per-connection; Pingora uses async Rust with shared connection pools → 999× fewer TCP connections for the same throughput
 
-> This is why Rust rewrites happen. Not for fun — for economics. Those freed servers cost $millions/year in data center costs.
+> This is why Rust rewrites happen. Not for fun, for economics. Those freed servers cost $millions/year in data center costs.
 
 ---
 
 ### 4. 0 nanoseconds of deserialization (literally)
 [Cap'n Proto]'s wire format **is** the memory format. There is no deserialization step.
-- **Before (Protobuf):** Send bytes → parse into struct → access fields
-- **After (Cap'n Proto):** Send bytes → **read fields directly from wire buffer**
-- **Use case:** A trading system cut inter-service latency from 180µs → 12µs by dropping Protobuf
+- Before (Protobuf): Send bytes → parse into struct → access fields
+- After (Cap'n Proto): Send bytes → **read fields directly from wire buffer**
+- Use case: A trading system cut inter-service latency from 180µs → 12µs by dropping Protobuf
 
 > How? The bytes you received off the network **are** the object. You don't copy them. You don't parse them. You just... read them. It's the most mind-bending performance trick in this entire list.
 
@@ -126,18 +126,18 @@ Cloudflare rewrote their proxy from Nginx (C) to [Pingora] (Rust).
 
 ### 5. The Kafka cluster that became a single binary
 A startup was running 5-node Kafka + 3-node ZooKeeper for their event pipeline.
-- **Before:** 8 servers, 3 engineers to operate, ~$8K/month infra
-- **After [Iggy.rs]:** 1 binary, 1 server, ~$200/month — **10× the throughput**
-- **The math:** Kafka's JVM needs ~6GB RAM per broker. Iggy.rs: ~200MB for the same throughput.
+- Before: 8 servers, 3 engineers to operate, ~$8K/month infra
+- After [Iggy.rs]: 1 binary, 1 server, ~$200/month, **10× the throughput**
+- The math: Kafka's JVM needs ~6GB RAM per broker. Iggy.rs: ~200MB for the same throughput.
 
 ---
 
 ### 6. The SHA-256 that was your bottleneck
-You probably have SHA-256 somewhere — file integrity, content addressing, deduplication.
+You probably have SHA-256 somewhere, file integrity, content addressing, deduplication.
 [BLAKE3] is 4–10× faster for payloads >4KB, **and** it's parallelizable (SHA-256 is sequential by design).
-- **Before:** Hashing 1TB of files took 40 minutes
-- **After:** 4–8 minutes, all cores utilized
-- **Change:** `sha256sum` → `b3sum`. 5 seconds to install.
+- Before: Hashing 1TB of files took 40 minutes
+- After: 4–8 minutes, all cores utilized
+- Change: `sha256sum` → `b3sum`. 5 seconds to install.
 
 > BLAKE3 was designed from scratch in 2020 by the Zcash team + Daniel J. Bernstein. It's newer, faster, and cryptographically sound. The only reason to use SHA-256 in 2026 is compliance requirements.
 
@@ -147,13 +147,13 @@ You probably have SHA-256 somewhere — file integrity, content addressing, dedu
 Mozilla + Cloudflare measured (2024): **58% of heap allocations in production Rust APIs come from JSON deserialization**.
 - `serde_json` builds an intermediate `Value` tree → allocates for every string, array, object
 - [sonic-rs] parses directly into your target struct → most allocations eliminated
-- **Real result:** A Rust microservice dropped from 1.2GB idle RAM → 480MB
+- Real result: A Rust microservice dropped from 1.2GB idle RAM → 480MB
 
 ---
 
-## 🔥 JSON Parsing
+## JSON Parsing
 
-### [sonic-rs](https://github.com/cloudwego/sonic-rs) `Rust` `2.5K ⭐` · ByteDance
+### [sonic-rs](https://github.com/cloudwego/sonic-rs) `Rust` `2.5K ` · ByteDance
 
 > Replaces **[`serde_json`](https://github.com/serde-rs/json)** → **1.5–2× faster · 50%+ less heap**
 
@@ -165,18 +165,18 @@ sonic-rs = "0.3"
 | Benchmark | sonic-rs | simd-json | serde_json |
 |-----------|:--------:|:---------:|:----------:|
 | Twitter parse | **796 µs** | 1,061 µs | ~3,000 µs |
-| Canada parse | **3.9 ms** | 5.2 ms | — |
+| Canada parse | **3.9 ms** | 5.2 ms |, |
 
-**Why faster:** Parses directly into your struct — no "tape" intermediate representation, no intermediate allocation. SIMD on x86-64 + aarch64 natively. Battle-tested at ByteDance (TikTok backend).
+**Why faster:** Parses directly into your struct, no "tape" intermediate representation, no intermediate allocation. SIMD on x86-64 + aarch64 natively. Battle-tested at ByteDance (TikTok backend).
 
-**Why NOT to use `serde_json` for hot paths:**
+#### Why NOT to use `serde_json` for hot paths
 - Builds a `serde_json::Value` tree → every field = 1–3 allocations
 - Single-threaded by design
 - No SIMD → misses AVX2/AVX-512 entirely
 
 **When NOT to use sonic-rs:** Non-SIMD targets, or when you need `serde_json`'s full `Value` API for dynamic JSON exploration.
 
-**Upgrade path:**
+#### Upgrade path
 ```rust
 // Before
 let v: MyStruct = serde_json::from_str(&s)?;
@@ -186,13 +186,13 @@ let v: MyStruct = sonic_rs::from_str(&s)?;
 
 ---
 
-### [simdjson](https://github.com/simdjson/simdjson) `C++` `18K ⭐` · [paper](https://arxiv.org/abs/1902.08318)
+### [simdjson](https://github.com/simdjson/simdjson) `C++` `18K ` · [paper](https://arxiv.org/abs/1902.08318)
 
 > Replaces **[`RapidJSON`](https://github.com/Tencent/rapidjson)**, **[`nlohmann/json`](https://github.com/nlohmann/json)** → **6 GB/s minification · industry standard**
 
-- `v4.3 (Mar 2025)` — +30% via LoongArch LSX/LASX SIMD
-- **Used by:** [Node.js](https://nodejs.org) · [ClickHouse](https://github.com/ClickHouse/ClickHouse) · [Apache Doris](https://github.com/apache/doris) · [Milvus](https://github.com/milvus-io/milvus) · Meta Velox · Shopify · Intel
-- **Two APIs:** DOM (full parse) + **On Demand** (reads only fields you access — faster for large docs)
+- `v4.3 (Mar 2025)`, +30% via LoongArch LSX/LASX SIMD
+- Used by: [Node.js](https://nodejs.org) · [ClickHouse](https://github.com/ClickHouse/ClickHouse) · [Apache Doris](https://github.com/apache/doris) · [Milvus](https://github.com/milvus-io/milvus) · Meta Velox · Shopify · Intel
+- Two APIs: DOM (full parse) + **On Demand** (reads only fields you access, faster for large docs)
 
 **Why NOT nlohmann/json:** Header-only convenience, but 10–20× slower than simdjson. Fine for small configs; catastrophic for hot paths.
 
@@ -202,7 +202,7 @@ let v: MyStruct = sonic_rs::from_str(&s)?;
 
 ---
 
-### [yyjson](https://github.com/ibireme/yyjson) `C` `4.2K ⭐` · [benchmark suite](https://github.com/ibireme/yyjson_benchmark)
+### [yyjson](https://github.com/ibireme/yyjson) `C` `4.2K ` · [benchmark suite](https://github.com/ibireme/yyjson_benchmark)
 
 > Replaces **[`cJSON`](https://github.com/DaveGamble/cJSON)**, **[`jansson`](https://github.com/akheron/jansson)** → **2.3× faster stringify · zero dependencies**
 
@@ -221,7 +221,7 @@ Zero dependencies. No C++ compiler. Single `.c` file. Embedded/IoT-ready. The st
 
 ---
 
-## 📦 Serialization
+## Serialization
 
 ### [Cap'n Proto](https://capnproto.org) `Multi` · [spec](https://capnproto.org/encoding.html) · [vs FlatBuffers/Protobuf](https://capnproto.org/news/2014-06-17-capnproto-flatbuffers-sbe.html)
 
@@ -236,7 +236,7 @@ Wire format = memory format. Reading a Cap'n Proto message = reading directly fr
 | Protobuf | ❌ | ~200 ns/field | ❌ | **Smallest** |
 | MessagePack | ❌ | Medium | ❌ | Small |
 
-**Why NOT Protobuf for latency-critical RPC:**
+#### Why NOT Protobuf for latency-critical RPC
 - Every `proto.Unmarshal()` = allocations + copy of every field
 - At 10K RPC/s → millions of unnecessary allocations/second
 - GC pressure in Go/Java → unpredictable P99 spikes
@@ -259,11 +259,11 @@ Per-field offset table = lazy loading. Only reads the fields you access. If your
 
 ---
 
-### [rkyv](https://github.com/rkyv/rkyv) `Rust` `5.5K ⭐` · [RustConf 2024 talk](https://2024.rustconf.com/programs/)
+### [rkyv](https://github.com/rkyv/rkyv) `Rust` `5.5K ` · [RustConf 2024 talk](https://2024.rustconf.com/programs/)
 
 > Replaces **[`serde`](https://github.com/serde-rs/serde)** for internal serialization → **200% throughput · 65% less memory**
 
-Serialize once, access forever. The archived representation **is** the struct — you access fields via zero-copy references into the byte buffer.
+Serialize once, access forever. The archived representation **is** the struct, you access fields via zero-copy references into the byte buffer.
 
 **Use cases:** caching layers · IPC between Rust processes · mmap-backed data stores · anywhere you serialize to store and read back many times.
 
@@ -271,21 +271,21 @@ Serialize once, access forever. The archived representation **is** the struct �
 
 ---
 
-## 🗄️ Query Engines & Columnar
+## Query Engines & Columnar
 
-### [Apache Arrow DataFusion](https://github.com/apache/datafusion) `Rust` `8.5K ⭐` · [SIGMOD 2024 paper](https://andrew.nerdnetworks.org/pdf/SIGMOD-2024-lamb.pdf)
+### [Apache Arrow DataFusion](https://github.com/apache/datafusion) `Rust` `8.5K ` · [SIGMOD 2024 paper](https://andrew.nerdnetworks.org/pdf/SIGMOD-2024-lamb.pdf)
 
 > Replaces **[`Apache Spark`](https://spark.apache.org/)** → **fastest Parquet parser (SIGMOD 2024) · embeds in single binary · 6 GB/s IPC**
 
 Embeds directly in your service. No cluster. No JVM. No ZooKeeper. No YARN. Just a Rust/Python library.
 
-**Why NOT Spark:**
-- Spark requires a JVM cluster (YARN/K8s) to run — minimum ~5 nodes for production
+#### Why NOT Spark
+- Spark requires a JVM cluster (YARN/K8s) to run, minimum ~5 nodes for production
 - Startup overhead: 30–90 seconds per job just for JVM warm-up
 - GC pressure → unpredictable P99s on large shuffles
 - For anything < 10TB, DataFusion is faster **and** requires zero infrastructure
 
-**Why NOT pandas for SQL-style queries:** pandas loads entire dataset into RAM eagerly. DataFusion is push-based + vectorized — processes data as a stream without materializing intermediate results.
+**Why NOT pandas for SQL-style queries:** pandas loads entire dataset into RAM eagerly. DataFusion is push-based + vectorized, processes data as a stream without materializing intermediate results.
 
 **Use cases:** embedded analytics · data lake query engines · ETL services · replacing Spark for datasets < ~5TB.
 
@@ -302,9 +302,9 @@ df = ctx.sql("SELECT user_id, count(*) FROM logs WHERE ts > now() - INTERVAL '7 
 
 > Replaces **`Parquet`** for ML/AI → **100× faster random access**
 
-Parquet is column-sequential — optimized for full column scans. Lance is optimized for random access patterns, which is exactly what ML training does (random mini-batch sampling from 10M rows).
+Parquet is column-sequential, optimized for full column scans. Lance is optimized for random access patterns, which is exactly what ML training does (random mini-batch sampling from 10M rows).
 
-**The AHA moment:** Training a model on 10M embedding vectors stored in Parquet: reading a 256-sample batch = scanning through gigabytes to find 256 scattered rows. In Lance: direct page-level lookup. 100× is not marketing — it's physics.
+**The AHA moment:** Training a model on 10M embedding vectors stored in Parquet: reading a 256-sample batch = scanning through gigabytes to find 256 scattered rows. In Lance: direct page-level lookup. 100× is not marketing, it's physics.
 
 **Why NOT Parquet for ML:** Parquet was designed for analytics workloads (scan entire columns). ML workloads need random row access. Wrong data structure for the job.
 
@@ -312,7 +312,7 @@ Parquet is column-sequential — optimized for full column scans. Lance is optim
 
 ---
 
-### [DuckDB](https://github.com/duckdb/duckdb) `C++` `36.9K ⭐` · [docs](https://duckdb.org/docs/) · [benchmark](https://duckdb.org/2023/03/03/jdbc.html)
+### [DuckDB](https://github.com/duckdb/duckdb) `C++` `36.9K ` · [docs](https://duckdb.org/docs/) · [benchmark](https://duckdb.org/2023/03/03/jdbc.html)
 
 > Replaces **`pandas`** · **`SQLite`** (analytics) · **`Spark`** (small-medium) → **5–10× · zero infrastructure**
 
@@ -322,9 +322,9 @@ import duckdb
 duckdb.sql("SELECT count(*) FROM 's3://bucket/events/*.parquet' WHERE event = 'purchase'")
 ```
 
-- Multi-hypothesis CSV parsing (tests delimiters in parallel — no more `sep=','` guessing)
+- Multi-hypothesis CSV parsing (tests delimiters in parallel, no more `sep=','` guessing)
 - Reads 10GB CSV in ~2s on M4 Max, same file pandas: ~45s
-- Embeds in Python, Rust, Go, Node, Java — **no server process**
+- Embeds in Python, Rust, Go, Node, Java, **no server process**
 
 **Why NOT SQLite for analytics:** SQLite is row-oriented (great for OLTP). DuckDB is column-oriented (great for analytics). Filtering 1 column on 10M rows: SQLite reads all columns anyway. DuckDB reads only the column you need.
 
@@ -336,7 +336,7 @@ duckdb.sql("SELECT count(*) FROM 's3://bucket/events/*.parquet' WHERE event = 'p
 
 ---
 
-### [Polars](https://github.com/pola-rs/polars) `Rust` `37.8K ⭐` · [docs](https://docs.pola.rs/) · [benchmarks](https://www.pola.rs/benchmarks.html)
+### [Polars](https://github.com/pola-rs/polars) `Rust` `37.8K ` · [docs](https://docs.pola.rs/) · [benchmarks](https://www.pola.rs/benchmarks.html)
 
 > Replaces **`pandas`** → **5–10× faster · lazy evaluation · SIMD multi-threaded**
 
@@ -349,7 +349,7 @@ result = df[df['revenue'] > 1000].groupby('country')['revenue'].sum()
 result = pl.scan_csv("huge.csv").filter(pl.col('revenue') > 1000).group_by('country').agg(pl.col('revenue').sum()).collect()
 ```
 
-**Why NOT pandas:**
+#### Why NOT pandas
 - Single-threaded by design (GIL + numpy)
 - Eager evaluation = materializes every intermediate result
 - Copies data on almost every operation
@@ -359,7 +359,7 @@ result = pl.scan_csv("huge.csv").filter(pl.col('revenue') > 1000).group_by('coun
 
 ---
 
-## ⚡ Async Runtime & I/O
+## Async Runtime & I/O
 
 ### [Monoio](https://github.com/bytedance/monoio) `Rust` · ByteDance · [blog post](https://www.bytecamp.net/monoio/)
 
@@ -367,19 +367,19 @@ result = pl.scan_csv("huge.csv").filter(pl.col('revenue') > 1000).group_by('coun
 
 | Cores | vs Tokio | vs NGINX |
 |:-----:|:--------:|:--------:|
-| 4 | +2× | — |
+| 4 | +2× |, |
 | 16 | **+3×** | **+20%** |
-| RPC throughput | +26% | — |
+| RPC throughput | +26% |, |
 
 **How:** Thread-per-core model + io_uring native. Each CPU core has its own event loop, no cross-thread work stealing overhead. Tokio uses a work-stealing scheduler (great for mixed workloads, overhead for pure I/O).
 
-**Why NOT vanilla Tokio for Linux I/O servers:** Tokio uses epoll under the hood. io_uring batches syscalls — 1 syscall for N I/O operations vs 1 syscall per operation. At high RPS, syscall overhead becomes the bottleneck.
+**Why NOT vanilla Tokio for Linux I/O servers:** Tokio uses epoll under the hood. io_uring batches syscalls, 1 syscall for N I/O operations vs 1 syscall per operation. At high RPS, syscall overhead becomes the bottleneck.
 
 **When NOT to use:** Cross-platform (macOS/Windows) · mixed CPU+I/O workloads · ecosystem compatibility (most async Rust libraries are Tokio-specific).
 
 ---
 
-### io_uring vs epoll — the syscall revolution
+### io_uring vs epoll: the syscall revolution
 
 | | io_uring | epoll |
 |--|:--------:|:-----:|
@@ -400,13 +400,13 @@ result = pl.scan_csv("huge.csv").filter(pl.col('revenue') > 1000).group_by('coun
 
 Cloudflare's battle-hardened `quiche` QUIC implementation + Tokio async runtime. Handles millions of HTTP/3 connections in production.
 
-**Why HTTP/3 at all:** HTTP/2 over TCP has head-of-line blocking — one lost packet stalls all streams. HTTP/3 over QUIC multiplexes independently — one lost packet stalls only its stream. On mobile networks: dramatic latency improvement.
+**Why HTTP/3 at all:** HTTP/2 over TCP has head-of-line blocking, one lost packet stalls all streams. HTTP/3 over QUIC multiplexes independently, one lost packet stalls only its stream. On mobile networks: dramatic latency improvement.
 
 **Why Quinn doesn't cut it for production:** Quinn is pure-Rust correctness-first. tokio-quiche is Cloudflare-hardened performance-first. For anything beyond experimentation, the production battle-testing matters.
 
 ---
 
-## 🌐 HTTP Servers & Proxies
+## HTTP Servers & Proxies
 
 ### [Pingora](https://github.com/cloudflare/pingora) `Rust` · Cloudflare · [blog post](https://blog.cloudflare.com/how-we-built-pingora-the-proxy-that-connects-cloudflare-to-the-internet/)
 
@@ -414,15 +414,15 @@ Cloudflare's battle-hardened `quiche` QUIC implementation + Tokio async runtime.
 
 | | Pingora | Nginx |
 |--|:-------:|:-----:|
-| Global scale | **1T req/day** | — |
+| Global scale | **1T req/day** |, |
 | CPU usage | **−60%** | baseline |
 | RAM usage | **−70%** | baseline |
 | P50 latency | **5ms improvement** | baseline |
 | Connection reuse | Shared pool across workers | Per-worker (no sharing) |
 
-**The reason Nginx wastes memory:** Nginx spawns a process per worker, each maintaining its own connection pool. Pingora uses async Rust — all workers share one connection pool. For a busy server making 10M upstream connections/day, Nginx creates each connection fresh. Pingora reuses them → 999× fewer TCP handshakes observed in Cloudflare's data.
+**The reason Nginx wastes memory:** Nginx spawns a process per worker, each maintaining its own connection pool. Pingora uses async Rust, all workers share one connection pool. For a busy server making 10M upstream connections/day, Nginx creates each connection fresh. Pingora reuses them → 999× fewer TCP handshakes observed in Cloudflare's data.
 
-**Why NOT Nginx in 2026:**
+#### Why NOT Nginx in 2026
 - Written in C → memory unsafety (CVEs year after year)
 - Process-per-worker → no connection pool sharing
 - Configuration is a DSL that can't express complex routing logic
@@ -434,7 +434,7 @@ Cloudflare's battle-hardened `quiche` QUIC implementation + Tokio async runtime.
 
 ---
 
-### [Hono](https://github.com/honojs/hono) `TypeScript` `21K ⭐` · [docs](https://hono.dev/) · [benchmarks](https://hono.dev/docs/concepts/benchmarks)
+### [Hono](https://github.com/honojs/hono) `TypeScript` `21K ` · [docs](https://hono.dev/) · [benchmarks](https://hono.dev/docs/concepts/benchmarks)
 
 > Replaces **[`Express`](https://expressjs.com/)**, **[`Fastify`](https://fastify.dev/)** → **402K req/s · 14KB bundle · runs everywhere**
 
@@ -447,8 +447,8 @@ app.get('/api/users', (c) => c.json({ users: [] }))
 export default app  // Works on: CF Workers · Bun · Deno · Node · Lambda
 ```
 
-**Why NOT Express in 2026:**
-- 28K req/s vs Hono's 402K — **14× slower**
+#### Why NOT Express in 2026
+- 28K req/s vs Hono's 402K, **14× slower**
 - No TypeScript support built-in
 - No native edge runtime support
 - Bundle size: 200KB+ vs Hono's 14KB
@@ -460,7 +460,7 @@ export default app  // Works on: CF Workers · Bun · Deno · Node · Lambda
 
 ---
 
-## 📨 Message Queues
+## Message Queues
 
 ### [Iggy.rs](https://github.com/iggy-rs/iggy) `Rust` · Apache License · [docs](https://docs.iggy.rs/)
 
@@ -474,7 +474,7 @@ export default app  // Works on: CF Workers · Bun · Deno · Node · Lambda
 | Operations | **1 binary** | ZooKeeper + JVM + 3+ brokers |
 | Monthly infra cost (est.) | **~$200** | **~$8,000** |
 
-**Why NOT Kafka in 2026 (unless you're Netflix):**
+#### Why NOT Kafka in 2026 (unless you're Netflix)
 - JVM startup: 30–90s cold start
 - ZooKeeper dependency (being replaced by KRaft, but still complex)
 - Minimum viable cluster: 3 brokers + 3 ZooKeeper nodes = 6 servers
@@ -485,7 +485,7 @@ export default app  // Works on: CF Workers · Bun · Deno · Node · Lambda
 
 ---
 
-### [Redpanda](https://github.com/redpanda-data/redpanda) `C++` `10K ⭐` · [docs](https://docs.redpanda.com/) · [benchmarks](https://redpanda.com/blog/kafka-vs-redpanda-performance-benchmark)
+### [Redpanda](https://github.com/redpanda-data/redpanda) `C++` `10K ` · [docs](https://docs.redpanda.com/) · [benchmarks](https://redpanda.com/blog/kafka-vs-redpanda-performance-benchmark)
 
 > Drop-in **Kafka API** compatible → **70× better P99 · no JVM · no ZooKeeper**
 
@@ -501,23 +501,23 @@ Use when: existing Kafka tooling (connectors, Schema Registry, Kafka Streams) mu
 
 > **29µs P99 · 4.7M msg/s** · kernel-bypass UDP · HFT gold standard
 
-Not a Kafka replacement — a fundamentally different class of tool.
+Not a Kafka replacement, a fundamentally different class of tool.
 
 **When:** sub-100µs is a hard requirement (HFT, financial exchanges, real-time auctions, multiplayer game servers).
 
-**Why the latency is so low:** Kernel-bypass networking (DPDK/RDMA) — messages never enter the OS kernel. Direct NIC-to-userspace DMA. 29µs P99 includes the full round trip.
+**Why the latency is so low:** Kernel-bypass networking (DPDK/RDMA), messages never enter the OS kernel. Direct NIC-to-userspace DMA. 29µs P99 includes the full round trip.
 
 **Why NOT for normal services:** Requires kernel-bypass network setup, specialized hardware, and significant operational knowledge. Complete overkill unless microseconds literally cost money.
 
 ---
 
-## 🗃️ Key-Value Stores
+## Key-Value Stores
 
 ### [Fjall](https://github.com/fjall-rs/fjall) `Rust` · v3.0 Jan 2026 · [docs](https://docs.rs/fjall)
 
 > Replaces **[`RocksDB`](https://github.com/facebook/rocksdb)** for Rust → **pure Rust · zero C++ FFI · <2.2MB**
 
-**Why NOT RocksDB in Rust:**
+#### Why NOT RocksDB in Rust
 - RocksDB is C++ → requires bindgen + C++ toolchain + FFI overhead
 - `rocksdb` crate compiles for 5–10 minutes (downloads and compiles all of RocksDB)
 - C++ allocator cannot be replaced with mimalloc without custom build
@@ -541,9 +541,9 @@ Not a Kafka replacement — a fundamentally different class of tool.
 
 ### [LMDB](https://github.com/LMDB/lmdb) `C` · [Howard Chu's talk](https://www.youtube.com/watch?v=tEa5sAh-kVk)
 
-> **567ms / 1M reads** — fastest bulk reads · zero-copy MMAP · [heed](https://github.com/meilisearch/heed) for Rust
+> **567ms / 1M reads**, fastest bulk reads · zero-copy MMAP · [heed](https://github.com/meilisearch/heed) for Rust
 
-MMAP-based B-tree. The OS page cache **is** the read cache — no double-buffering. Zero-copy reads: you get pointers directly into the mmap'd file.
+MMAP-based B-tree. The OS page cache **is** the read cache, no double-buffering. Zero-copy reads: you get pointers directly into the mmap'd file.
 
 **Use cases:** read-heavy lookups (embedding stores, config DBs, DNS caches) · anywhere you read >> write · [Meilisearch uses LMDB](https://github.com/meilisearch/meilisearch) for its indexes.
 
@@ -551,9 +551,9 @@ MMAP-based B-tree. The OS page cache **is** the read cache — no double-bufferi
 
 ---
 
-## 🔍 Full-Text Search
+## Full-Text Search
 
-### [Tantivy](https://github.com/quickwit-oss/tantivy) `Rust` `14.8K ⭐` · [docs](https://docs.rs/tantivy) · [benchmark](https://tantivy-search.github.io/bench/)
+### [Tantivy](https://github.com/quickwit-oss/tantivy) `Rust` `14.8K ` · [docs](https://docs.rs/tantivy) · [benchmark](https://tantivy-search.github.io/bench/)
 
 > Replaces **[`Elasticsearch`](https://github.com/elastic/elasticsearch)**, **[`Lucene`](https://lucene.apache.org/)** → **6.5× faster · 56% less RAM · embeds in your binary**
 
@@ -564,7 +564,7 @@ MMAP-based B-tree. The OS page cache **is** the read cache — no double-bufferi
 | RAM (1M docs) | **2.1 GB** | 4.8 GB |
 | Deployment | **1 library** | JVM cluster |
 
-**Why NOT Elasticsearch in 2026:**
+#### Why NOT Elasticsearch in 2026
 - Requires JVM → minimum 2–4GB heap just to start
 - Cluster mode = 3+ nodes for HA
 - GC pauses → unpredictable P99 spikes under load
@@ -574,19 +574,19 @@ MMAP-based B-tree. The OS page cache **is** the read cache — no double-bufferi
 
 ---
 
-### [TypeSense](https://github.com/typesense/typesense) `C++` `22K ⭐` · [docs](https://typesense.org/docs/) · [cloud](https://cloud.typesense.org/)
+### [TypeSense](https://github.com/typesense/typesense) `C++` `22K ` · [docs](https://typesense.org/docs/) · [cloud](https://cloud.typesense.org/)
 
 > Replaces **[`Algolia`](https://www.algolia.com/)**, **`Elasticsearch`** → **<50ms · RAM-based · $0/month self-hosted**
 
 RAM-first = always instant. Typo tolerance built in. Simple REST API.
 
-**Why NOT Algolia:** $500–10K+/month. TypeSense self-hosted: $0. Algolia's only advantage is their CDN-distributed edge network — which TypeSense Cloud also offers.
+**Why NOT Algolia:** $500–10K+/month. TypeSense self-hosted: $0. Algolia's only advantage is their CDN-distributed edge network, which TypeSense Cloud also offers.
 
 **Why NOT Elasticsearch for app search:** You don't need Kibana, Logstash, Beats, and a 3-node cluster for a search box in your SaaS app. TypeSense is one binary, one API.
 
 ---
 
-## 🧠 Memory Allocators
+## Memory Allocators
 
 ### [mimalloc](https://github.com/microsoft/mimalloc) `C` · Microsoft · [paper](https://www.microsoft.com/en-us/research/uploads/prod/2019/06/mimalloc-tr-v1.pdf)
 
@@ -613,13 +613,13 @@ static GLOBAL: mimalloc::MiMalloc = mimalloc::MiMalloc;
 
 > **Highest concurrent throughput** for message-passing workloads
 
-Uses a "message passing" deallocation model — objects are freed by sending them back to their originating thread's pool. Eliminates the cross-thread free bottleneck entirely.
+Uses a "message passing" deallocation model, objects are freed by sending them back to their originating thread's pool. Eliminates the cross-thread free bottleneck entirely.
 
 **Use when:** Actor-style or channel-heavy code where one thread allocates and a different thread frees. Higher memory overhead than mimalloc, but wins on concurrent throughput benchmarks.
 
 ---
 
-## #️⃣ Hash Functions
+## #⃣ Hash Functions
 
 ### [rapidhash](https://github.com/Nicoshev/rapidhash) `Rust/C` · [benchmarks](https://github.com/Nicoshev/rapidhash#benchmarks)
 
@@ -627,7 +627,7 @@ Uses a "message passing" deallocation model — objects are freed by sending the
 
 Newest champion (2025). Specifically optimized for Apple Silicon M4 microarchitecture. Beats both xxHash3 and wyhash on ARM64.
 
-**Why NOT MD5/SHA-1 for non-crypto hashing:** 1–3 GB/s vs 71 GB/s. If you're using MD5 for deduplication or cache keys — you're leaving 50× performance on the table, and paying for crypto properties you don't need.
+**Why NOT MD5/SHA-1 for non-crypto hashing:** 1–3 GB/s vs 71 GB/s. If you're using MD5 for deduplication or cache keys, you're leaving 50× performance on the table, and paying for crypto properties you don't need.
 
 ---
 
@@ -635,9 +635,9 @@ Newest champion (2025). Specifically optimized for Apple Silicon M4 microarchite
 
 > Replaces **[`SHA-256`](https://en.wikipedia.org/wiki/SHA-2)**, **`SHA-3`** → **8.4 GB/s multi-core · 4–10× faster >4KB · parallelizable**
 
-SHA-256 is sequential by design — you must process block N before block N+1. BLAKE3 uses a Merkle tree internally — all blocks are independent and can be hashed in parallel across all cores.
+SHA-256 is sequential by design, you must process block N before block N+1. BLAKE3 uses a Merkle tree internally, all blocks are independent and can be hashed in parallel across all cores.
 
-**Why NOT SHA-256 (unless compliance forces you):**
+#### Why NOT SHA-256 (unless compliance forces you)
 - Sequential → can't use multiple cores
 - No hardware acceleration on ARM (unlike AES-NI)
 - 4–10× slower for large files
@@ -651,18 +651,18 @@ SHA-256 is sequential by design — you must process block N before block N+1. B
 
 > Replaces **`SipHash`** (Rust's default `HashMap`) → **fastest non-crypto hash for `HashMap`**
 
-Default in [`hashbrown`](https://github.com/rust-lang/hashbrown) (which backs `std::HashMap`). AES-based — uses hardware AES-NI instructions for the hash.
+Default in [`hashbrown`](https://github.com/rust-lang/hashbrown) (which backs `std::HashMap`). AES-based, uses hardware AES-NI instructions for the hash.
 
 ```rust
 use ahash::AHashMap;
 let mut map: AHashMap<String, u64> = AHashMap::new(); // Done.
 ```
 
-**Why Rust uses SipHash by default:** DoS resistance — adversarial inputs can't cause pathological hash collisions. If your HashMap keys come from untrusted users → keep SipHash. For internal maps with trusted keys → AHash.
+**Why Rust uses SipHash by default:** DoS resistance, adversarial inputs can't cause pathological hash collisions. If your HashMap keys come from untrusted users → keep SipHash. For internal maps with trusted keys → AHash.
 
 ---
 
-## 🗜️ Compression
+## Compression
 
 | Use Case | Tool | Decomp Speed | Ratio | When to pick |
 |----------|------|:------------:|:-----:|--------------|
@@ -684,15 +684,15 @@ zstd -D dict.zst -19 input.json -o compressed.zst  # ~10x better on small simila
 
 ---
 
-## 🔎 Regex & String Search
+## Regex & String Search
 
-### [Hyperscan](https://github.com/intel/hyperscan) → [Vectorscan](https://github.com/VectorCamp/vectorscan) `C` · [paper](https://www.usenix.org/conference/nsdi19/presentation/wang-xiang)
+### [Hyperscan](https://github.com/intel/hyperscan) [Vectorscan](https://github.com/VectorCamp/vectorscan) `C` · [paper](https://www.usenix.org/conference/nsdi19/presentation/wang-xiang)
 
 > Replaces **[`PCRE`](https://github.com/PCRE2Project/pcre2)** for multi-pattern matching → **8.73× faster · 986 Mbps · DPI gold standard**
 
 Intel SIMD regex engine. Matches **thousands of patterns simultaneously** in a single pass through the input. Standard in [Suricata](https://suricata.io/), [Snort](https://www.snort.org/), [Zeek](https://zeek.org/).
 
-**The AHA moment:** With PCRE, matching 1000 patterns on a packet = 1000 regex evaluations in sequence. With Hyperscan = 1 pass, all 1000 matched simultaneously via SIMD. For intrusion detection on 10Gbps links, this isn't an optimization — it's the only option.
+**The AHA moment:** With PCRE, matching 1000 patterns on a packet = 1000 regex evaluations in sequence. With Hyperscan = 1 pass, all 1000 matched simultaneously via SIMD. For intrusion detection on 10Gbps links, this isn't an optimization, it's the only option.
 
 **Vectorscan** = community fork with ARM support (Hyperscan is Intel-only). Use Vectorscan for cross-platform builds.
 
@@ -700,7 +700,7 @@ Intel SIMD regex engine. Matches **thousands of patterns simultaneously** in a s
 
 ### [RE2](https://github.com/google/re2) `C++` · Google · [safety guarantee](https://github.com/google/re2/wiki/Syntax)
 
-> Replaces **`PCRE`** for untrusted input → **Linear O(n) — no ReDoS possible**
+> Replaces **`PCRE`** for untrusted input → **Linear O(n), no ReDoS possible**
 
 PCRE has exponential worst-case complexity. RE2 uses a DFA/NFA construction that guarantees O(n) time regardless of pattern or input.
 
@@ -716,13 +716,13 @@ PCRE has exponential worst-case complexity. RE2 uses a DFA/NFA construction that
 
 > **3.2–8.8× SIMD speedup** over classic Aho-Corasick for multi-pattern substring search
 
-16B (SSE) / 32B (AVX) SIMD chunks — processes 16–32 bytes per cycle. This is what makes `ripgrep` faster than `grep` for code search.
+16B (SSE) / 32B (AVX) SIMD chunks, processes 16–32 bytes per cycle. This is what makes `ripgrep` faster than `grep` for code search.
 
 **Use aho-corasick when:** multi-pattern substring matching without full regex overhead. Searching for 1000 keywords in a document? Aho-Corasick makes one pass; naive loop makes 1000 passes.
 
 ---
 
-## 🔐 Cryptography
+## Cryptography
 
 ### [aws-lc-rs](https://github.com/aws/aws-lc-rs) `Rust` · AWS · [FIPS docs](https://github.com/aws/aws-lc-rs/blob/main/aws-lc-rs/FIPS.md)
 
@@ -734,7 +734,7 @@ Drop-in replacement for the `ring` Rust crate (same API). Formally verified. FIP
 
 **Why NOT ring for compliance:** ring is NOT FIPS certified. If you're handling healthcare, finance, or government data → you need FIPS 140-3. aws-lc-rs is your only Rust-native option.
 
-**Cargo.toml:**
+#### Cargo.toml
 ```toml
 [dependencies]
 aws-lc-rs = "1"
@@ -744,11 +744,11 @@ ring = { package = "aws-lc-rs", version = "1", features = ["ring-sig-verify"] }
 
 ---
 
-## 🛢️ Databases — Multi-Model & Specialized
+## Databases: Multi-Model & Specialized
 
-### [SurrealDB](https://github.com/surrealdb/surrealdb) `Rust` `28K ⭐` · [docs](https://surrealdb.com/docs) · [benchmarks](https://surrealdb.com/blog/benchmarking-surrealdb-for-use-as-a-serverside-database)
+### [SurrealDB](https://github.com/surrealdb/surrealdb) `Rust` `28K ` · [docs](https://surrealdb.com/docs) · [benchmarks](https://surrealdb.com/blog/benchmarking-surrealdb-for-use-as-a-serverside-database)
 
-> **One database that thinks like you do.** SQL + graph + document + time-series + vector search — all in one query engine. No ORMs. No joins between services. No polyglot persistence tax.
+> **One database that thinks like you do.** SQL + graph + document + time-series + vector search, all in one query engine. No ORMs. No joins between services. No polyglot persistence tax.
 
 ```surql
 -- Graph traversal + vector search + SQL in ONE query
@@ -762,49 +762,49 @@ ORDER BY match_score DESC LIMIT 10;
 
 **Why NOT PostgreSQL:** Postgres is relational-first. To do what the above query does you'd need: Postgres (SQL) + Neo4j (graph) + pgvector (vector) + jsonb workarounds (document) + separate connection poolers for each. SurrealDB is a single binary.
 
-**Why NOT MongoDB:** Mongo added transactions late, graph never, vector as an afterthought. SurrealDB was designed for all of these from day one. And Mongo's query language is a JSON horror — SurrealQL reads like SQL.
+**Why NOT MongoDB:** Mongo added transactions late, graph never, vector as an afterthought. SurrealDB was designed for all of these from day one. And Mongo's query language is a JSON horror, SurrealQL reads like SQL.
 
-**Top alternatives if SurrealDB is wrong for you:**
-1. **[EdgeDB](https://github.com/edgedb/edgedb)** `Python/Rust` `15K ⭐` — Postgres-backed, typed schema, beautiful query language. Best if you want migrations + type safety + Postgres reliability. Trade-off: no native graph, no vector.
-2. **[PocketBase](https://github.com/pocketbase/pocketbase)** `Go` `44K ⭐` — Single binary, SQLite-backed, REST + realtime built-in. Best for solo projects and prototypes. Trade-off: not for multi-node production.
+#### Top alternatives if SurrealDB is wrong for you
+1. **[EdgeDB](https://github.com/edgedb/edgedb)** `Python/Rust` `15K ⭐`, Postgres-backed, typed schema, beautiful query language. Best if you want migrations + type safety + Postgres reliability. Trade-off: no native graph, no vector.
+2. **[PocketBase](https://github.com/pocketbase/pocketbase)** `Go` `44K ⭐`, Single binary, SQLite-backed, REST + realtime built-in. Best for solo projects and prototypes. Trade-off: not for multi-node production.
 
 **AHA moment:** A startup replaced 4 services (PostgreSQL + Redis + Elasticsearch + Neo4j) with SurrealDB. Infra cost: $2,400/month → $140/month. Query latency dropped because no more network hops between services.
 
-**When NOT:** SurrealDB 3.x is alpha-track — don't use it for regulated financial data yet. Use TigerBeetle for that.
+**When NOT:** SurrealDB 3.x is alpha-track, don't use it for regulated financial data yet. Use TigerBeetle for that.
 
 ---
 
-### [TigerBeetle](https://github.com/tigerbeetle/tigerbeetle) `Zig` `11K ⭐` · [docs](https://docs.tigerbeetle.com) · [design doc](https://tigerbeetle.com/blog/a-brief-history-of-consensus-two-phase-commit-and-why-you-should-pick-them-over-distributed-transactions/)
+### [TigerBeetle](https://github.com/tigerbeetle/tigerbeetle) `Zig` `11K ` · [docs](https://docs.tigerbeetle.com) · [design doc](https://tigerbeetle.com/blog/a-brief-history-of-consensus-two-phase-commit-and-why-you-should-pick-them-over-distributed-transactions/)
 
 > **The database purpose-built for financial transactions.** 1 million financial transactions per second with zero data loss. Formal verification. Byzantine fault tolerance. Built to survive disk corruption, power cuts, and hardware failure.
 
-**Why NOT PostgreSQL for finance:** Every fintech horror story involves double-charges, phantom balances, or race conditions in Postgres. TigerBeetle's entire model is built around the two-phase ledger pattern — it's *physically impossible* to create money or lose it due to a bug.
+**Why NOT PostgreSQL for finance:** Every fintech horror story involves double-charges, phantom balances, or race conditions in Postgres. TigerBeetle's entire model is built around the two-phase ledger pattern, it's *physically impossible* to create money or lose it due to a bug.
 
 **Why NOT Redis for ledgers:** Redis is in-memory first. One power cut and your ledger is gone. TigerBeetle uses `io_uring` with explicit fsync and formal proofs that data is durable before acknowledging writes.
 
-**Top alternatives:**
-1. **[FoundationDB](https://github.com/apple/foundationdb)** `C++` `14K ⭐` — Apple's distributed ACID database. More general-purpose than TigerBeetle. Powers Apple iCloud, Snowflake. Best when you need general transactions, not just financial.
-2. **[CockroachDB](https://github.com/cockroachdb/cockroach)** `Go` `30K ⭐` — Distributed Postgres-compatible. Better for global multi-region apps where you're already on Postgres. Trade-off: much more complex ops, 3-node minimum.
+#### Top alternatives
+1. **[FoundationDB](https://github.com/apple/foundationdb)** `C++` `14K ⭐`, Apple's distributed ACID database. More general-purpose than TigerBeetle. Powers Apple iCloud, Snowflake. Best when you need general transactions, not just financial.
+2. **[CockroachDB](https://github.com/cockroachdb/cockroach)** `Go` `30K ⭐`, Distributed Postgres-compatible. Better for global multi-region apps where you're already on Postgres. Trade-off: much more complex ops, 3-node minimum.
 
 **When to use:** Financial ledgers, payment systems, double-entry accounting, any system where "how much money is in this account?" must be 100% accurate always.
 
 ---
 
-### [Turso / libSQL](https://github.com/tursodatabase/libsql) `Rust` `14K ⭐` · [docs](https://docs.turso.tech) · [benchmarks](https://turso.tech/blog/sqlite-vs-turso-performance)
+### [Turso / libSQL](https://github.com/tursodatabase/libsql) `Rust` `14K ` · [docs](https://docs.turso.tech) · [benchmarks](https://turso.tech/blog/sqlite-vs-turso-performance)
 
-> **SQLite — but for the edge.** Fork of SQLite that adds: replication, multi-tenancy, embedded replicas (local + remote sync), and a REST API. 10,000 databases per app. Sub-millisecond reads from local replica.
+> **SQLite, but for the edge.** Fork of SQLite that adds: replication, multi-tenancy, embedded replicas (local + remote sync), and a REST API. 10,000 databases per app. Sub-millisecond reads from local replica.
 
 **Why NOT vanilla SQLite:** SQLite has no replication, no network access, no multi-tenancy. Once you outgrow a single file, you're stuck. libSQL extends SQLite without breaking compatibility.
 
 **Why NOT PlanetScale:** PlanetScale shut down its free tier and charges per query. Turso has a generous free tier, self-hosting, and embedded replicas that work offline.
 
-**Top alternatives:**
-1. **[LiteFS](https://github.com/superfly/litefs)** `Go` `4K ⭐` — Fly.io's SQLite replication layer via FUSE filesystem. Best for Fly.io-deployed apps. Trade-off: FUSE overhead, Fly.io lock-in.
-2. **[Neon](https://github.com/neondatabase/neon)** `Rust` `16K ⭐` — Serverless Postgres with branching (like git branches for your DB). Best when you need full Postgres compatibility + scale to zero. Trade-off: Postgres overhead vs SQLite simplicity.
+#### Top alternatives
+1. **[LiteFS](https://github.com/superfly/litefs)** `Go` `4K ⭐`, Fly.io's SQLite replication layer via FUSE filesystem. Best for Fly.io-deployed apps. Trade-off: FUSE overhead, Fly.io lock-in.
+2. **[Neon](https://github.com/neondatabase/neon)** `Rust` `16K ⭐`, Serverless Postgres with branching (like git branches for your DB). Best when you need full Postgres compatibility + scale to zero. Trade-off: Postgres overhead vs SQLite simplicity.
 
 ---
 
-### [ClickHouse](https://github.com/ClickHouse/ClickHouse) `C++` `39K ⭐` · [docs](https://clickhouse.com/docs) · [benchmarks](https://benchmark.clickhouse.com)
+### [ClickHouse](https://github.com/ClickHouse/ClickHouse) `C++` `39K ` · [docs](https://clickhouse.com/docs) · [benchmarks](https://benchmark.clickhouse.com)
 
 > **The OLAP database that makes Elasticsearch look like a calculator.** Columnar storage, vectorized execution, 1 billion rows/second query speed. Used by Cloudflare, Uber, ByteDance for event analytics.
 
@@ -812,17 +812,17 @@ ORDER BY match_score DESC LIMIT 10;
 
 **Why NOT BigQuery/Redshift:** Cloud OLAP bills are **per query scanned**. One team at Cloudflare reported $50K/month BigQuery bills for analytics that cost $400/month on self-hosted ClickHouse.
 
-**Top alternatives:**
-1. **[Apache Doris](https://github.com/apache/doris)** `C++` `13K ⭐` — MySQL-compatible OLAP. Best if your team knows MySQL and you need real-time + historical analytics in one system. Trade-off: more complex to operate than ClickHouse.
-2. **[DuckDB](https://duckdb.org)** — (already in this list) For single-node analytics, DuckDB is simpler. Use ClickHouse when you need distributed, multi-user, production-scale analytics.
+#### Top alternatives
+1. **[Apache Doris](https://github.com/apache/doris)** `C++` `13K ⭐`, MySQL-compatible OLAP. Best if your team knows MySQL and you need real-time + historical analytics in one system. Trade-off: more complex to operate than ClickHouse.
+2. **[DuckDB](https://duckdb.org)**, (already in this list) For single-node analytics, DuckDB is simpler. Use ClickHouse when you need distributed, multi-user, production-scale analytics.
 
 **AHA moment:** [Cloudflare processes 600 billion rows](https://blog.cloudflare.com/http-analytics-for-6m-requests-per-second-using-clickhouse/) of HTTP logs per day in ClickHouse. The entire analytics dashboard loads in under 1 second.
 
 ---
 
-## 🧠 Vector Databases
+## Vector Databases
 
-### [Qdrant](https://github.com/qdrant/qdrant) `Rust` `22K ⭐` · [docs](https://qdrant.tech/documentation/) · [benchmarks](https://qdrant.tech/benchmarks/)
+### [Qdrant](https://github.com/qdrant/qdrant) `Rust` `22K ` · [docs](https://qdrant.tech/documentation/) · [benchmarks](https://qdrant.tech/benchmarks/)
 
 > **The vector database built for production AI.** 4× faster than Pinecone on filtered vector search. Written in Rust, built on HNSW + quantization. Handles billion-scale collections. Self-hostable or cloud.
 
@@ -843,31 +843,31 @@ results = client.search(
 
 **Why NOT pgvector:** pgvector stores vectors in Postgres rows. At 1M+ vectors, it becomes a full table scan problem. Qdrant's HNSW index gives sub-millisecond search at 100M vectors. pgvector is fine for <100K vectors where you want to stay in Postgres.
 
-**Top alternatives:**
-1. **[Weaviate](https://github.com/weaviate/weaviate)** `Go` `12K ⭐` — GraphQL-native vector DB with built-in text2vec modules. Best when you want turnkey embeddings without managing your own embedding pipeline. Trade-off: heavier, slower on raw vector search.
-2. **[Milvus](https://github.com/milvus-io/milvus)** `Go/C++` `33K ⭐` — Enterprise-scale vector DB (used by Salesforce, Walmart). Best for billion-scale collections with GPU acceleration. Trade-off: Kubernetes-native, significant ops overhead.
+#### Top alternatives
+1. **[Weaviate](https://github.com/weaviate/weaviate)** `Go` `12K ⭐`, GraphQL-native vector DB with built-in text2vec modules. Best when you want turnkey embeddings without managing your own embedding pipeline. Trade-off: heavier, slower on raw vector search.
+2. **[Milvus](https://github.com/milvus-io/milvus)** `Go/C++` `33K ⭐`, Enterprise-scale vector DB (used by Salesforce, Walmart). Best for billion-scale collections with GPU acceleration. Trade-off: Kubernetes-native, significant ops overhead.
 
 **When NOT:** For <50K vectors with Postgres already in your stack, just use pgvector. Don't introduce a new database for tiny-scale RAG.
 
 ---
 
-### [LanceDB](https://github.com/lancedb/lancedb) `Rust` `6K ⭐` · [docs](https://lancedb.github.io/lancedb/) · [paper](https://arxiv.org/html/2504.15247v1)
+### [LanceDB](https://github.com/lancedb/lancedb) `Rust` `6K ` · [docs](https://lancedb.github.io/lancedb/) · [paper](https://arxiv.org/html/2504.15247v1)
 
 > **Serverless vector database on object storage.** No server to run. Data lives in S3/GCS/local as Lance files (columnar, like Parquet for ML). Sub-second vector search on 10M vectors from S3.
 
-**Why NOT Chroma:** Chroma is great for prototyping but has no production deployment story — it's in-process Python. LanceDB works in-process AND scales to S3-backed production.
+**Why NOT Chroma:** Chroma is great for prototyping but has no production deployment story, it's in-process Python. LanceDB works in-process AND scales to S3-backed production.
 
-**Top alternatives:**
-1. **[Qdrant](https://qdrant.tech)** — better for multi-user production server deployments with complex filtering.
-2. **[DuckDB + vss extension](https://github.com/duckdb/duckdb_vss)** — if you're already in DuckDB for analytics, add vector search without another service.
+#### Top alternatives
+1. **[Qdrant](https://qdrant.tech)**, better for multi-user production server deployments with complex filtering.
+2. **[DuckDB + vss extension](https://github.com/duckdb/duckdb_vss)**, if you're already in DuckDB for analytics, add vector search without another service.
 
 ---
 
-## 🐍 Python Toolchain
+## Python Toolchain
 
-### [uv](https://github.com/astral-sh/uv) `Rust` `50K ⭐` · [docs](https://docs.astral.sh/uv/) · [benchmarks](https://github.com/astral-sh/uv/blob/main/BENCHMARKS.md)
+### [uv](https://github.com/astral-sh/uv) `Rust` `50K ` · [docs](https://docs.astral.sh/uv/) · [benchmarks](https://github.com/astral-sh/uv/blob/main/BENCHMARKS.md)
 
-> **pip + virtualenv + pyenv + poetry — replaced by one Rust binary.** `uv pip install numpy` is **10-100× faster** than pip. Resolves your entire `requirements.txt` in under a second. Ships Python itself (no pyenv needed).
+> **pip + virtualenv + pyenv + poetry, replaced by one Rust binary.** `uv pip install numpy` is **10-100× faster** than pip. Resolves your entire `requirements.txt` in under a second. Ships Python itself (no pyenv needed).
 
 ```bash
 # Before uv — the pain
@@ -880,49 +880,49 @@ pip install -r requirements.txt  # 2 min 18 sec
 uv run python app.py  # installs Python + deps in 3.2 sec, first time ever
 ```
 
-**Why NOT pip:** pip resolves dependencies in O(n²) time using a backtracking algorithm. On a 50-package project, pip can take minutes. uv uses a SAT solver written in Rust — milliseconds.
+**Why NOT pip:** pip resolves dependencies in O(n²) time using a backtracking algorithm. On a 50-package project, pip can take minutes. uv uses a SAT solver written in Rust, milliseconds.
 
 **Why NOT Poetry:** Poetry is slower than pip, adds a lockfile format nobody else uses, and has subtle resolution bugs that have caused production incidents. uv is a drop-in replacement with a `uv.lock` that is spec-compliant.
 
-**Top alternatives:**
-1. **[Rye](https://github.com/astral-sh/rye)** `Rust` — uv's predecessor, now merging into uv. If you're on Rye, migrate to uv — it's the successor.
-2. **[Pixi](https://github.com/prefix-dev/pixi)** `Rust` `7K ⭐` — conda-compatible package manager. Best for scientific Python with binary deps (CUDA, MKL). Trade-off: different ecosystem than PyPI.
+#### Top alternatives
+1. **[Rye](https://github.com/astral-sh/rye)** `Rust`, uv's predecessor, now merging into uv. If you're on Rye, migrate to uv, it's the successor.
+2. **[Pixi](https://github.com/prefix-dev/pixi)** `Rust` `7K ⭐`, conda-compatible package manager. Best for scientific Python with binary deps (CUDA, MKL). Trade-off: different ecosystem than PyPI.
 
 **AHA moment:** A ML team running CI on GitHub Actions dropped build time from 4min 30sec → 23sec just by swapping `pip install` for `uv pip install`. Same requirements.txt, zero code changes.
 
 ---
 
-### [Ruff](https://github.com/astral-sh/ruff) `Rust` `36K ⭐` · [docs](https://docs.astral.sh/ruff/) · [benchmarks](https://docs.astral.sh/ruff/faq/#how-does-ruff-compare-to-flake8)
+### [Ruff](https://github.com/astral-sh/ruff) `Rust` `36K ` · [docs](https://docs.astral.sh/ruff/) · [benchmarks](https://docs.astral.sh/ruff/faq/#how-does-ruff-compare-to-flake8)
 
-> **10-100× faster than Flake8.** Replaces flake8 + black + isort + pyupgrade + pydocstyle — all in one binary. Lints a 300K-line codebase in 0.3 seconds.
+> **10-100× faster than Flake8.** Replaces flake8 + black + isort + pyupgrade + pydocstyle, all in one binary. Lints a 300K-line codebase in 0.3 seconds.
 
 **Why NOT flake8 + black:** Running flake8 + black + isort in pre-commit means 3 separate tools, 3 separate processes, 3 separate configs. Ruff does all of this in one pass. [Django migrated to Ruff](https://github.com/django/django/pull/17881) and cut CI lint step from 40s to 1.5s.
 
 **Why NOT pylint:** Pylint is slow (minutes on large codebases), has a high false-positive rate, and requires significant config. Ruff covers ~90% of pylint's rules at 100× the speed.
 
-**Top alternatives:**
-1. **[mypy](https://github.com/python/mypy)** `Python` — Ruff doesn't do type checking. Use Ruff for linting + mypy for types. Or use [pyright](https://github.com/microsoft/pyright) for faster type checking.
-2. **[Pyright](https://github.com/microsoft/pyright)** `TypeScript` `14K ⭐` — Microsoft's type checker, 3-5× faster than mypy. Pairs perfectly with Ruff.
+#### Top alternatives
+1. **[mypy](https://github.com/python/mypy)** `Python`, Ruff doesn't do type checking. Use Ruff for linting + mypy for types. Or use [pyright](https://github.com/microsoft/pyright) for faster type checking.
+2. **[Pyright](https://github.com/microsoft/pyright)** `TypeScript` `14K ⭐`, Microsoft's type checker, 3-5× faster than mypy. Pairs perfectly with Ruff.
 
 ---
 
-### [Maturin](https://github.com/PyO3/maturin) `Rust` `4K ⭐` · [docs](https://www.maturin.rs/)
+### [Maturin](https://github.com/PyO3/maturin) `Rust` `4K ` · [docs](https://www.maturin.rs/)
 
 > **Build and publish Python packages from Rust with one command.** The bridge that lets you write hot paths in Rust and call them from Python. Powers [polars](https://github.com/pola-rs/polars), [pydantic-core](https://github.com/pydantic/pydantic-core), [cryptography](https://github.com/pyca/cryptography).
 
 **Why:** When your Python is too slow, you rewrite the bottleneck in Rust with PyO3, then `maturin develop` gives you a Python-importable `.so`. No C extensions, no Cython, no ctypes boilerplate.
 
-**Top alternatives:**
-1. **[PyO3](https://github.com/PyO3/pyo3)** `Rust` `13K ⭐` — the Rust<→Python FFI layer that Maturin builds on. Use PyO3 for the Rust code, Maturin for the build/publish pipeline.
-2. **[cffi](https://cffi.readthedocs.io/)** — still works for C. For anything new in Rust, Maturin + PyO3 is strictly better.
+#### Top alternatives
+1. **[PyO3](https://github.com/PyO3/pyo3)** `Rust` `13K ⭐`, the Rust<→Python FFI layer that Maturin builds on. Use PyO3 for the Rust code, Maturin for the build/publish pipeline.
+2. **[cffi](https://cffi.readthedocs.io/)**, still works for C. For anything new in Rust, Maturin + PyO3 is strictly better.
 
 ---
 
-## ⚡ JS/TS Runtime & Build
+## JS/TS Runtime & Build
 
-### [Bun](https://github.com/oven-sh/bun) `Zig` `77K ⭐` · [docs](https://bun.sh/docs) · [benchmarks](https://bun.sh/docs/runtime/benchmarks)
+### [Bun](https://github.com/oven-sh/bun) `Zig` `77K ` · [docs](https://bun.sh/docs) · [benchmarks](https://bun.sh/docs/runtime/benchmarks)
 
-> **Node.js + npm + Webpack + Jest — replaced by one binary.** Starts 4× faster than Node. `bun install` is 25× faster than npm. Built-in TypeScript, JSX, bundler, test runner, and SQLite. Zero config.
+> **Node.js + npm + Webpack + Jest, replaced by one binary.** Starts 4× faster than Node. `bun install` is 25× faster than npm. Built-in TypeScript, JSX, bundler, test runner, and SQLite. Zero config.
 
 ```bash
 # Before: 4 tools, 4 configs, 4 package.json scripts
@@ -939,19 +939,19 @@ bun test             # test runner built-in
 
 **Why NOT Node.js:** Node loads 100+ modules at startup for a basic Express app. Bun's JavaScriptCore engine starts in microseconds. For serverless edge functions, cold start time is your SLA.
 
-**Why NOT Deno:** Deno made breaking changes for years and has poor npm compatibility. Bun is a drop-in Node.js replacement — your existing code runs as-is.
+**Why NOT Deno:** Deno made breaking changes for years and has poor npm compatibility. Bun is a drop-in Node.js replacement, your existing code runs as-is.
 
-**Top alternatives:**
-1. **[Deno](https://github.com/denoland/deno)** `Rust` `100K ⭐` — V8-based, TypeScript-native, great security model (explicit permissions). Best for security-sensitive scripts and Deno Deploy. Trade-off: npm compatibility still imperfect.
-2. **[Node.js 22+](https://nodejs.org)** with `--experimental-strip-types` — if you need maximum ecosystem compatibility and can't migrate to Bun yet. Node now strips TypeScript types natively.
+#### Top alternatives
+1. **[Deno](https://github.com/denoland/deno)** `Rust` `100K ⭐`, V8-based, TypeScript-native, great security model (explicit permissions). Best for security-sensitive scripts and Deno Deploy. Trade-off: npm compatibility still imperfect.
+2. **[Node.js 22+](https://nodejs.org)** with `--experimental-strip-types`, if you need maximum ecosystem compatibility and can't migrate to Bun yet. Node now strips TypeScript types natively.
 
 **AHA moment:** A team running 500 microservices on AWS Lambda dropped cold start from 800ms (Node.js) to 120ms (Bun) without changing a single line of application code.
 
 ---
 
-### [Vite 8](https://github.com/vitejs/vite) `TypeScript` `71K ⭐` · [docs](https://vitejs.dev) · [blog](https://vitejs.dev/blog/) · [v8 release](https://vitejs.dev/blog/announcing-vite8)
+### [Vite 8](https://github.com/vitejs/vite) `TypeScript` `71K ` · [docs](https://vitejs.dev) · [blog](https://vitejs.dev/blog/) · [v8 release](https://vitejs.dev/blog/announcing-vite8)
 
-> **Vite 8 (March 2026): Rolldown is now the default bundler.** The esbuild + Rollup split is over — Vite 8 uses [Rolldown](https://rolldown.rs) internally, giving you a unified Rust bundler that's 25× faster than Rollup+esbuild while keeping full Rollup plugin compatibility.
+> **Vite 8 (March 2026): Rolldown is now the default bundler.** The esbuild + Rollup split is over, Vite 8 uses [Rolldown](https://rolldown.rs) internally, giving you a unified Rust bundler that's 25× faster than Rollup+esbuild while keeping full Rollup plugin compatibility.
 
 ```bash
 # Vite 8 — zero migration from v7, Rolldown transparent
@@ -959,17 +959,17 @@ npm create vite@latest my-app
 # HMR in <50ms · Cold start <300ms · Build 25x faster than Webpack
 ```
 
-**Why NOT Webpack:** Webpack bundles everything before you can see anything. On a 1,000-module project, cold start takes 30-90 seconds. Vite serves files as-is via native ESM — no bundling step.
+**Why NOT Webpack:** Webpack bundles everything before you can see anything. On a 1,000-module project, cold start takes 30-90 seconds. Vite serves files as-is via native ESM, no bundling step.
 
 **Why NOT Create React App:** CRA is officially deprecated (March 2023). It uses Webpack under the hood. Vite is the official successor recommended by the React team.
 
-**Top alternatives:**
-1. **[Farm](https://github.com/farm-fe/farm)** `Rust` `5.5K ⭐` — Vite-compatible Rust bundler, drop-in alternative for performance-critical setups. Builds 19K modules in 1.4s. Best if you want Vite compatibility but even more build speed.
-2. **[Turbopack](https://github.com/vercel/turbo)** `Rust` — Vercel's bundler, integrated into Next.js 15. Comparable speed to Rolldown. Trade-off: Next.js only, not standalone.
+#### Top alternatives
+1. **[Farm](https://github.com/farm-fe/farm)** `Rust` `5.5K ⭐`, Vite-compatible Rust bundler, drop-in alternative for performance-critical setups. Builds 19K modules in 1.4s. Best if you want Vite compatibility but even more build speed.
+2. **[Turbopack](https://github.com/vercel/turbo)** `Rust`, Vercel's bundler, integrated into Next.js 15. Comparable speed to Rolldown. Trade-off: Next.js only, not standalone.
 
 ---
 
-### [Rolldown](https://github.com/rolldown-rs/rolldown) `Rust` `13.3K ⭐` · [docs](https://rolldown.rs) · [benchmarks](https://rolldown.rs/#benchmarks)
+### [Rolldown](https://github.com/rolldown-rs/rolldown) `Rust` `13.3K ` · [docs](https://rolldown.rs) · [benchmarks](https://rolldown.rs/#benchmarks)
 
 > **The bundler that unified esbuild + Rollup.** Rust-based, Rollup-API-compatible, esbuild-speed. Now the default engine inside Vite 8. Use directly for library builds, CLI tools, and non-Vite projects.
 
@@ -982,11 +982,11 @@ npm create vite@latest my-app
 
 **Why NOT esbuild alone:** esbuild is fast but has no tree-shaking for complex dynamic imports and no Rollup plugin ecosystem. Rolldown inherits all Rollup plugins AND esbuild speed.
 
-**Why NOT Rollup:** Rollup is JavaScript. Rolldown is Rollup rewritten in Rust — same API, 25× faster. If you're on Rollup today, Rolldown is a transparent upgrade.
+**Why NOT Rollup:** Rollup is JavaScript. Rolldown is Rollup rewritten in Rust, same API, 25× faster. If you're on Rollup today, Rolldown is a transparent upgrade.
 
-**Top alternatives:**
-1. **[esbuild](https://github.com/evanw/esbuild)** `Go` `40K ⭐` — Still faster for trivial bundles, great for CLIs/tools. Use Rolldown when you need Rollup-level code splitting + plugin ecosystem.
-2. **[OXC](https://github.com/oxc-project/oxc)** `Rust` `20.4K ⭐` — Umbrella Rust toolchain (parser + linter + formatter + bundler). OXC's bundler is the long-term play but still maturing. Watch 2026-2027.
+#### Top alternatives
+1. **[esbuild](https://github.com/evanw/esbuild)** `Go` `40K ⭐`, Still faster for trivial bundles, great for CLIs/tools. Use Rolldown when you need Rollup-level code splitting + plugin ecosystem.
+2. **[OXC](https://github.com/oxc-project/oxc)** `Rust` `20.4K ⭐`, Umbrella Rust toolchain (parser + linter + formatter + bundler). OXC's bundler is the long-term play but still maturing. Watch 2026-2027.
 
 ---
 
@@ -994,37 +994,37 @@ npm create vite@latest my-app
 
 > **The unified Vite ecosystem layer** from VoidZero (the company Evan You founded to commercialize Vite/Rolldown/OXC). Wraps runtime + package manager + build tool into one coherent DX. Think: the "Next.js of build tooling" but framework-agnostic.
 
-**Status (April 2026):** Active development, ~5-10K stars, recent dependency and performance updates. Watch closely — this is the official upstream for where Vite + Rolldown + OXC are heading.
+**Status (April 2026):** Active development, ~5-10K stars, recent dependency and performance updates. Watch closely, this is the official upstream for where Vite + Rolldown + OXC are heading.
 
 ---
 
 ### [Vike](https://vike.dev) · (formerly vite-plugin-ssr) `TypeScript` · [migration guide](https://vike.dev/migration)
 
-> **Vite-native SSR/SSG/SPA router — page-by-page render mode.** The most flexible Vite meta-framework. Each page can independently be: SSR · SSG · SPA · streaming. No lock-in.
+> **Vite-native SSR/SSG/SPA router, page-by-page render mode.** The most flexible Vite meta-framework. Each page can independently be: SSR · SSG · SPA · streaming. No lock-in.
 
 **Why NOT Next.js for Vite users:** Next.js forces you to Vercel's deployment model and App Router complexity. Vike is framework-agnostic, deploys anywhere (Cloudflare Workers, AWS Lambda, Docker, Vercel), and gives you full control over rendering strategy per page.
 
-**Top alternatives:**
-1. **[SvelteKit](https://kit.svelte.dev)** — best meta-framework if you're on Svelte. Simpler than Vike for pure Svelte projects.
-2. **[Analog](https://analogjs.org)** — Angular meta-framework on Vite. Best if your org is Angular-committed.
+#### Top alternatives
+1. **[SvelteKit](https://kit.svelte.dev)**, best meta-framework if you're on Svelte. Simpler than Vike for pure Svelte projects.
+2. **[Analog](https://analogjs.org)**, Angular meta-framework on Vite. Best if your org is Angular-committed.
 
 ---
 
-### [Biome](https://github.com/biomejs/biome) `Rust` `18K ⭐` · [docs](https://biomejs.dev) · [benchmarks](https://biomejs.dev/blog/biome-v1/)
+### [Biome](https://github.com/biomejs/biome) `Rust` `18K ` · [docs](https://biomejs.dev) · [benchmarks](https://biomejs.dev/blog/biome-v1/)
 
-> **ESLint + Prettier — replaced by one Rust binary.** Formats and lints in <100ms. The [Rome Tools fork](https://biomejs.dev/blog/annoucing-biome/) that actually shipped. 97% compatibility with Prettier output.
+> **ESLint + Prettier, replaced by one Rust binary.** Formats and lints in <100ms. The [Rome Tools fork](https://biomejs.dev/blog/annoucing-biome/) that actually shipped. 97% compatibility with Prettier output.
 
 **Why NOT ESLint + Prettier:** Two tools, two configs, constant version conflicts (`eslint-config-prettier`, `prettier-eslint`), slow CI. Biome replaces both in one binary with zero config.
 
-**Top alternatives:**
-1. **[oxlint](https://github.com/oxc-project/oxc)** `Rust` `13K ⭐` — 50-100× faster than ESLint. New project but growing fast. Pairs well with Prettier if you don't want full Biome.
-2. **[dprint](https://github.com/dprint/dprint)** `Rust` `3K ⭐` — formatter-only, plugin-based. Best if you need Prettier-compatible formatting but want more control.
+#### Top alternatives
+1. **[oxlint](https://github.com/oxc-project/oxc)** `Rust` `13K ⭐`, 50-100× faster than ESLint. New project but growing fast. Pairs well with Prettier if you don't want full Biome.
+2. **[dprint](https://github.com/dprint/dprint)** `Rust` `3K ⭐`, formatter-only, plugin-based. Best if you need Prettier-compatible formatting but want more control.
 
 ---
 
-## 🔗 Linkers & Build Speed
+## Linkers & Build Speed
 
-### [mold](https://github.com/rui314/mold) `C++` `15K ⭐` · [benchmarks](https://github.com/rui314/mold#benchmarks)
+### [mold](https://github.com/rui314/mold) `C++` `15K ` · [benchmarks](https://github.com/rui314/mold#benchmarks)
 
 > **The linker that makes Rust builds feel fast.** 8× faster than GNU ld, 2× faster than lld on large C++/Rust projects. Links Chrome in 2 seconds. Links a large Rust binary in 0.5s vs 8s with ld.
 
@@ -1037,63 +1037,63 @@ rustflags = ["-C", "link-arg=-fuse-ld=mold"]
 
 **Why NOT the default `ld`:** GNU ld is single-threaded and was designed in 1987. It links by reading every object file sequentially. mold uses lock-free concurrent algorithms and finishes before ld has read half the inputs.
 
-**Why NOT lld (LLVM linker):** lld is already fast. mold is faster on Linux for large binaries. On macOS, use `lld` (mold is Linux-only) — macOS `ld64` replacement is `zld` or just use lld.
+**Why NOT lld (LLVM linker):** lld is already fast. mold is faster on Linux for large binaries. On macOS, use `lld` (mold is Linux-only), macOS `ld64` replacement is `zld` or just use lld.
 
-**Top alternatives:**
-1. **[lld](https://lld.llvm.org)** `C++` — LLVM's linker. Works on macOS + Linux. 4× faster than GNU ld. Good default upgrade before considering mold.
-2. **[wild](https://github.com/davidlattimore/wild)** `Rust` `4K ⭐` — New Rust linker, still experimental. Aims to be even faster than mold for incremental Rust builds. Watch 2026.
+#### Top alternatives
+1. **[lld](https://lld.llvm.org)** `C++`, LLVM's linker. Works on macOS + Linux. 4× faster than GNU ld. Good default upgrade before considering mold.
+2. **[wild](https://github.com/davidlattimore/wild)** `Rust` `4K ⭐`, New Rust linker, still experimental. Aims to be even faster than mold for incremental Rust builds. Watch 2026.
 
 **AHA moment:** A Rust backend team running `cargo build` in CI dropped from 8 min 40s → 2 min 10s by adding 3 lines to `.cargo/config.toml`. No code changes. No new hardware.
 
 ---
 
-## 📊 Observability & Metrics
+## Observability & Metrics
 
-### [VictoriaMetrics](https://github.com/VictoriaMetrics/VictoriaMetrics) `Go` `13K ⭐` · [docs](https://docs.victoriametrics.com) · [benchmarks](https://valyala.medium.com/prometheus-vs-victoriametrics-benchmark-on-node-exporter-metrics-4ca29c75590f)
+### [VictoriaMetrics](https://github.com/VictoriaMetrics/VictoriaMetrics) `Go` `13K ` · [docs](https://docs.victoriametrics.com) · [benchmarks](https://valyala.medium.com/prometheus-vs-victoriametrics-benchmark-on-node-exporter-metrics-4ca29c75590f)
 
-> **Prometheus — but 10× smaller storage, 3× faster queries, and actually scales.** Drop-in Prometheus-compatible. Single binary. Handles 10M+ metrics/second on a single node with 7× better compression than Prometheus.
+> **Prometheus, but 10× smaller storage, 3× faster queries, and actually scales.** Drop-in Prometheus-compatible. Single binary. Handles 10M+ metrics/second on a single node with 7× better compression than Prometheus.
 
 **Why NOT Prometheus:** Prometheus was not designed for long-term storage. Its local TSDB degrades after a few months, it has no horizontal scaling story, and high-cardinality metrics (Kubernetes labels) kill it. VictoriaMetrics handles billions of time series on a single node.
 
 **Why NOT Datadog/New Relic:** Datadog bills by host + metric cardinality. A 100-node Kubernetes cluster with standard metrics can hit $8,000/month. VictoriaMetrics on a $200/month server handles the same load. [Booking.com saved $4M/year](https://victoriametrics.com/case-studies/booking.com/) switching from Datadog.
 
-**Top alternatives:**
-1. **[Thanos](https://github.com/thanos-io/thanos)** `Go` `13K ⭐` — Prometheus with object storage + horizontal scaling. Best if you're already committed to Prometheus and need HA + long-term storage. Trade-off: more complex than VictoriaMetrics.
-2. **[Mimir](https://github.com/grafana/mimir)** `Go` `4K ⭐` — Grafana's horizontally scalable Prometheus backend. Best when you're already on Grafana Cloud ecosystem.
+#### Top alternatives
+1. **[Thanos](https://github.com/thanos-io/thanos)** `Go` `13K ⭐`, Prometheus with object storage + horizontal scaling. Best if you're already committed to Prometheus and need HA + long-term storage. Trade-off: more complex than VictoriaMetrics.
+2. **[Mimir](https://github.com/grafana/mimir)** `Go` `4K ⭐`, Grafana's horizontally scalable Prometheus backend. Best when you're already on Grafana Cloud ecosystem.
 
 ---
 
-### [Pyroscope](https://github.com/grafana/pyroscope) `Go` `10K ⭐` · [docs](https://grafana.com/docs/pyroscope/)
+### [Pyroscope](https://github.com/grafana/pyroscope) `Go` `10K ` · [docs](https://grafana.com/docs/pyroscope/)
 
-> **Continuous profiling — see WHERE your CPU and memory go in production, always.** Phlare/Pyroscope adds a 2-5% overhead flame graph stream from every running service. Find the function burning your CPU budget.
+> **Continuous profiling, see WHERE your CPU and memory go in production, always.** Phlare/Pyroscope adds a 2-5% overhead flame graph stream from every running service. Find the function burning your CPU budget.
 
-**Why NOT nothing:** Most teams only profile when things break. By then the bug is hard to reproduce. Pyroscope profiles continuously — you can look back in time and see what was running when your CPU spike happened.
+**Why NOT nothing:** Most teams only profile when things break. By then the bug is hard to reproduce. Pyroscope profiles continuously, you can look back in time and see what was running when your CPU spike happened.
 
 **Why NOT manual profiling (pprof/perf):** Manual profiling is a snapshot. Pyroscope is a time-series of flame graphs. You can correlate CPU spikes with deployments, traffic peaks, or specific user actions.
 
-**Top alternatives:**
-1. **[Clinic.js](https://clinicjs.org)** — for Node.js profiling specifically. Better DX for JS devs than Pyroscope's JS agent.
-2. **[Parca](https://github.com/parca-dev/parca)** `Go` `4K ⭐` — eBPF-based continuous profiler, no code instrumentation needed. Best for profiling without modifying your app.
+#### Top alternatives
+1. **[Clinic.js](https://clinicjs.org)**, for Node.js profiling specifically. Better DX for JS devs than Pyroscope's JS agent.
+2. **[Parca](https://github.com/parca-dev/parca)** `Go` `4K ⭐`, eBPF-based continuous profiler, no code instrumentation needed. Best for profiling without modifying your app.
 
 ---
 
-### [OpenObserve](https://github.com/openobserve/openobserve) `Rust` `14K ⭐` · [docs](https://openobserve.ai/docs/) · [benchmarks](https://openobserve.ai/blog/openobserve-vs-elasticsearch/)
+### [OpenObserve](https://github.com/openobserve/openobserve) `Rust` `14K ` · [docs](https://openobserve.ai/docs/) · [benchmarks](https://openobserve.ai/blog/openobserve-vs-elasticsearch/)
 
-> **Elasticsearch for logs — at 140× lower storage cost.** Logs + metrics + traces in one UI. S3-compatible object storage backend. OpenTelemetry-native. Replaces the entire ELK stack.
+> **Elasticsearch for logs, at 140× lower storage cost.** Logs + metrics + traces in one UI. S3-compatible object storage backend. OpenTelemetry-native. Replaces the entire ELK stack.
 
-**Why NOT ELK (Elasticsearch + Logstash + Kibana):** Elasticsearch uses inverted indices that store terms for every field — 10 bytes of log becomes 50-100 bytes stored. OpenObserve uses columnar Parquet on S3 — 10 bytes of log becomes 1-2 bytes. At 1TB/day of logs, ELK costs $15K+/month on cloud. OpenObserve costs ~$200/month in S3 fees.
+**Why NOT ELK (Elasticsearch + Logstash + Kibana):** Elasticsearch uses inverted indices that store terms for every field, 10 bytes of log becomes 50-100 bytes stored. OpenObserve uses columnar Parquet on S3, 10 bytes of log becomes 1-2 bytes. At 1TB/day of logs, ELK costs $15K+/month on cloud. OpenObserve costs ~$200/month in S3 fees.
 
-**Top alternatives:**
-1. **[Grafana Loki](https://github.com/grafana/loki)** `Go` `24K ⭐` — Log aggregation with label-based indexing. Doesn't index log content (only metadata), so much cheaper than ELK. Best if you're already on Grafana. Trade-off: full-text log search is slower without content indexing.
-2. **[ClickHouse](https://clickhouse.com)** — ClickHouse handles structured logs brilliantly. Many teams skip dedicated log tools and just send logs to ClickHouse, then query with SQL.
+#### Top alternatives
+1. **[Grafana Loki](https://github.com/grafana/loki)** `Go` `24K ⭐`, Log aggregation with label-based indexing. Doesn't index log content (only metadata), so much cheaper than ELK. Best if you're already on Grafana. Trade-off: full-text log search is slower without content indexing.
+2. **[ClickHouse](https://clickhouse.com)**, ClickHouse handles structured logs brilliantly. Many teams skip dedicated log tools and just send logs to ClickHouse, then query with SQL.
 
 ---
 
-## 🖥️ Frontend Gamechangers
+## Frontend Gamechangers
 
-### [Astro](https://github.com/withastro/astro) `TypeScript` `49K ⭐` · [docs](https://docs.astro.build) · [benchmarks](https://astro.build/blog/2023-web-framework-performance-report/)
+### [Astro](https://github.com/withastro/astro) `TypeScript` `49K ` · [docs](https://docs.astro.build) · [benchmarks](https://astro.build/blog/2023-web-framework-performance-report/)
 
-> **Zero JavaScript by default.** Ship HTML with optional islands of interactivity. Pages that load in 50ms instead of 3 seconds. Use React, Vue, Svelte, or Solid components — all in the same project.
+> **Zero JavaScript by default.** Ship HTML with optional islands of interactivity. Pages that load in 50ms instead of 3 seconds. Use React, Vue, Svelte, or Solid components, all in the same project.
 
 ```astro
 ---
@@ -1107,19 +1107,19 @@ const products = await db.query("SELECT * FROM products");
 <InteractiveCart client:load />
 ```
 
-**Why NOT Next.js for content sites:** Next.js ships a React runtime (~45KB gzipped) on every page, even if the page is static. A blog post doesn't need a JavaScript framework. Astro sends zero JS for static pages — [measurably better Core Web Vitals](https://astro.build/blog/2023-web-framework-performance-report/).
+**Why NOT Next.js for content sites:** Next.js ships a React runtime (~45KB gzipped) on every page, even if the page is static. A blog post doesn't need a JavaScript framework. Astro sends zero JS for static pages, [measurably better Core Web Vitals](https://astro.build/blog/2023-web-framework-performance-report/).
 
 **Why NOT Gatsby:** Gatsby was the Astro of 2019 but added complexity over time. It's slow to build (minutes for large sites), has a heavyweight GraphQL data layer, and has been in maintenance mode since Netlify acquired it.
 
-**Top alternatives:**
-1. **[SvelteKit](https://github.com/sveltejs/kit)** `TypeScript` `19K ⭐` — Full-stack meta-framework on Svelte. Best when you need full interactivity + SSR without the React overhead. Svelte compiles to vanilla JS — no virtual DOM.
-2. **[Remix](https://github.com/remix-run/remix)** `TypeScript` `30K ⭐` — React meta-framework focused on progressive enhancement and web standards. Best for React teams that want a Next.js alternative with better data loading patterns.
+#### Top alternatives
+1. **[SvelteKit](https://github.com/sveltejs/kit)** `TypeScript` `19K ⭐`, Full-stack meta-framework on Svelte. Best when you need full interactivity + SSR without the React overhead. Svelte compiles to vanilla JS, no virtual DOM.
+2. **[Remix](https://github.com/remix-run/remix)** `TypeScript` `30K ⭐`, React meta-framework focused on progressive enhancement and web standards. Best for React teams that want a Next.js alternative with better data loading patterns.
 
 ---
 
-### [Svelte 5](https://github.com/sveltejs/svelte) `TypeScript` `82K ⭐` · [docs](https://svelte.dev) · [benchmarks](https://krausest.github.io/js-framework-benchmark/)
+### [Svelte 5](https://github.com/sveltejs/svelte) `TypeScript` `82K ` · [docs](https://svelte.dev) · [benchmarks](https://krausest.github.io/js-framework-benchmark/)
 
-> **A compiler, not a framework.** Svelte 5 with Runes is 30-50% faster than React in JS framework benchmarks. Ships ~10KB for a full interactive app vs React's ~45KB runtime. No virtual DOM, no diffing — it compiles to surgical DOM updates.
+> **A compiler, not a framework.** Svelte 5 with Runes is 30-50% faster than React in JS framework benchmarks. Ships ~10KB for a full interactive app vs React's ~45KB runtime. No virtual DOM, no diffing, it compiles to surgical DOM updates.
 
 ```svelte
 <script>
@@ -1133,17 +1133,17 @@ const products = await db.query("SELECT * FROM products");
 </button>
 ```
 
-**Why NOT React:** React's virtual DOM diffing is an optimization for a problem Svelte doesn't have. Svelte compiles to imperative DOM updates — no reconciliation, no fiber, no hook rules. The mental model is simpler: your component IS your output.
+**Why NOT React:** React's virtual DOM diffing is an optimization for a problem Svelte doesn't have. Svelte compiles to imperative DOM updates, no reconciliation, no fiber, no hook rules. The mental model is simpler: your component IS your output.
 
 **Why NOT Vue:** Vue 3's Composition API is an explicit answer to React's hook problem. Svelte's Runes solve the same thing with less ceremony. Vue ships ~35KB runtime; Svelte ships the compiled output only.
 
-**Top alternatives:**
-1. **[SolidJS](https://github.com/solidjs/solid)** `TypeScript` `33K ⭐` — JSX syntax + fine-grained reactivity. Faster than Svelte in most benchmarks. Best if you love React's JSX model but hate React's performance. Trade-off: smaller ecosystem than Svelte.
-2. **[Preact](https://github.com/preactjs/preact)** `TypeScript` `37K ⭐` — React-compatible, 3KB. Best for dropping into existing React apps or size-critical situations. Trade-off: React compatibility shims add back some weight.
+#### Top alternatives
+1. **[SolidJS](https://github.com/solidjs/solid)** `TypeScript` `33K ⭐`, JSX syntax + fine-grained reactivity. Faster than Svelte in most benchmarks. Best if you love React's JSX model but hate React's performance. Trade-off: smaller ecosystem than Svelte.
+2. **[Preact](https://github.com/preactjs/preact)** `TypeScript` `37K ⭐`, React-compatible, 3KB. Best for dropping into existing React apps or size-critical situations. Trade-off: React compatibility shims add back some weight.
 
 ---
 
-## 🎯 Decision Matrix
+## Decision Matrix
 
 > Structured for AI agents and quick lookups
 
@@ -1210,7 +1210,7 @@ CRYPTO_TLS_FIPS → aws-lc-rs      | replaces: openssl       | gain: FIPS 140-3,
 
 ---
 
-## 🏆 The 2026 Stack
+## The 2026 Stack
 
 > Paste this into your `ARCHITECTURE.md`
 
@@ -1259,32 +1259,32 @@ CRYPTO_TLS_FIPS → aws-lc-rs      | replaces: openssl       | gain: FIPS 140-3,
 
 ---
 
-## 📊 Emerging — Watch 2026
+## Emerging: Watch 2026
 
 | Tool | Stars | Status | Why it matters |
 |------|:-----:|--------|----------------|
-| [Vortex](https://github.com/spiraldb/vortex) | — | Prototype | Adaptive per-column encoding → 10× Parquet compression ratio |
+| [Vortex](https://github.com/spiraldb/vortex) |, | Prototype | Adaptive per-column encoding → 10× Parquet compression ratio |
 | [rkyv](https://github.com/rkyv/rkyv) | `5.5K` | Stable | 200% throughput, 65% memory reduction, zero-copy Rust |
 | [Glaze](https://github.com/stephenberry/glaze) | `1.5K` | Active | Claims to beat simdjson; early but promising benchmarks |
 | [Fjall 3.0](https://github.com/fjall-rs/fjall) | `1K` | ✅ Jan 2026 | Pure-Rust RocksDB replacement hits v3.0 stable |
-| [sonic-go](https://github.com/bytedance/sonic) | `7K` | Active | SIMD-JSON for Go — ByteDance's port of the sonic approach |
+| [sonic-go](https://github.com/bytedance/sonic) | `7K` | Active | SIMD-JSON for Go, ByteDance's port of the sonic approach |
 | [iggy.rs v1.0](https://github.com/iggy-rs/iggy) | `2K` | Active | Approaching stable API; watch for v1.0 production declaration |
 | [Pingap](https://github.com/vicanso/pingap) | `3K` | Active | Pingora-based reverse proxy with config-driven management |
-| [DataFusion Comet](https://github.com/apache/datafusion-comet) | `1K` | Active | Spark plugin that accelerates Spark with DataFusion — gradual migration path |
+| [DataFusion Comet](https://github.com/apache/datafusion-comet) | `1K` | Active | Spark plugin that accelerates Spark with DataFusion, gradual migration path |
 | [wild linker](https://github.com/davidlattimore/wild) | `4K` | Active | New Rust-native linker, may beat mold for incremental Rust builds |
 | [oxlint](https://github.com/oxc-project/oxc) | `13K` | Active | 50-100× faster ESLint; catching up fast on rule coverage |
-| [OXC bundler](https://github.com/oxc-project/oxc) | `20.4K` | Active | Full Rust JS toolchain (parser+linter+formatter+bundler) — long-term Rolldown rival |
+| [OXC bundler](https://github.com/oxc-project/oxc) | `20.4K` | Active | Full Rust JS toolchain (parser+linter+formatter+bundler), long-term Rolldown rival |
 | [Farm](https://github.com/farm-fe/farm) | `5.5K` | ✅ Stable | Vite-compatible Rust bundler, builds 19K modules in 1.4s |
 | [VitePlus](https://github.com/voidzero-dev/vite-plus) | `~8K` | Active | VoidZero's unified Vite+Rolldown+OXC ecosystem layer |
-| [Rolldown](https://rolldown.rs) | `13.3K` | ✅ Vite 8 | Now the default Vite 8 bundler — Rollup+esbuild unified in Rust |
-| [ty (Astral)](https://github.com/astral-sh/ty) | — | Alpha | Ruff's type checker companion; will challenge mypy/pyright |
-| [Parca](https://github.com/parca-dev/parca) | `4K` | Active | eBPF continuous profiling — zero code instrumentation needed |
-| [RisingWave](https://github.com/risingwavelabs/risingwave) | `8K` | Active | Streaming SQL database — Flink replacement in Rust |
+| [Rolldown](https://rolldown.rs) | `13.3K` | ✅ Vite 8 | Now the default Vite 8 bundler, Rollup+esbuild unified in Rust |
+| [ty (Astral)](https://github.com/astral-sh/ty) |, | Alpha | Ruff's type checker companion; will challenge mypy/pyright |
+| [Parca](https://github.com/parca-dev/parca) | `4K` | Active | eBPF continuous profiling, zero code instrumentation needed |
+| [RisingWave](https://github.com/risingwavelabs/risingwave) | `8K` | Active | Streaming SQL database, Flink replacement in Rust |
 | [Neon](https://github.com/neondatabase/neon) | `16K` | ✅ GA | Serverless Postgres with git-like branching for DB schemas |
 
 ---
 
-## 🤖 Agent Query API
+## Agent Query API
 
 This list is machine-indexed in [SurrealDB](https://surrealdb.com) for agent-driven tool selection:
 
@@ -1317,24 +1317,24 @@ ORDER BY stars DESC;
 
 ---
 
-## 🔬 Methodology
+## Methodology
 
 1. **18,286 repos** indexed from [`awesome-rust`](https://github.com/rust-unofficial/awesome-rust) · [`awesome-go`](https://github.com/avelino/awesome-go) · [`awesome-cpp`](https://github.com/fffaraz/awesome-cpp) · [`awesome-selfhosted`](https://github.com/awesome-selfhosted/awesome-selfhosted) · [`awesome-mcp-servers`](https://github.com/punkpeye/awesome-mcp-servers) + 15 other lists
 2. All repos stored in **[SurrealDB](https://surrealdb.com)** with stars, forks, language, topics, last commit
 3. **768-dim [HNSW](https://arxiv.org/abs/1603.09320) embeddings** via [nomic-embed-text](https://huggingface.co/nomic-ai/nomic-embed-text-v1) (Ollama) for semantic discovery
 4. **68 RELATE graph edges** `gamechanger_tool → replaces → legacy_repo` built in SurrealDB
-5. Benchmarks from official repos, [SIGMOD papers](https://andrew.nerdnetworks.org/pdf/SIGMOD-2024-lamb.pdf), [Cloudflare blog](https://blog.cloudflare.com/how-we-built-pingora-the-proxy-that-connects-cloudflare-to-the-internet/), and production case studies — never marketing copy
+5. Benchmarks from official repos, [SIGMOD papers](https://andrew.nerdnetworks.org/pdf/SIGMOD-2024-lamb.pdf), [Cloudflare blog](https://blog.cloudflare.com/how-we-built-pingora-the-proxy-that-connects-cloudflare-to-the-internet/), and production case studies, never marketing copy
 
 ---
 
 ## Contributing
 
-PR criteria — all four required:
+PR criteria, all four required:
 
 1. **Real benchmark** with a source URL (no "blazing fast" without a number)
 2. **Production-proven** OR active commit in last 6 months
 3. **Clear replacement target** (what legacy tool does it beat, and why)
-4. **Honest "When NOT to use"** section — this is what separates useful lists from hype lists
+4. **Honest "When NOT to use"** section, this is what separates useful lists from hype lists
 
 [Open a PR](../../compare) · [Suggest a tool via Issue](../../issues/new/choose)
 
