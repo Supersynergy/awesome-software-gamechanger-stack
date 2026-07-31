@@ -298,7 +298,7 @@ df = ctx.sql("SELECT user_id, count(*) FROM logs WHERE ts > now() - INTERVAL '7 
 
 ---
 
-### [Lance](https://github.com/lancedb/lance) `Rust` · [paper](https://arxiv.org/html/2504.15247v1) · [LanceDB](https://github.com/lancedb/lancedb)
+### [Lance](https://github.com/lance-format/lance) `Rust` · [paper](https://arxiv.org/html/2504.15247v1) · [LanceDB](https://github.com/lance-format/lancedb)
 
 > Replaces **`Parquet`** for ML/AI → **100× faster random access**
 
@@ -308,7 +308,7 @@ Parquet is column-sequential, optimized for full column scans. Lance is optimize
 
 **Why NOT Parquet for ML:** Parquet was designed for analytics workloads (scan entire columns). ML workloads need random row access. Wrong data structure for the job.
 
-**Use cases:** embedding stores · ML training datasets · multi-modal data (images + metadata) · vector databases ([LanceDB](https://github.com/lancedb/lancedb) is built on Lance).
+**Use cases:** embedding stores · ML training datasets · multi-modal data (images + metadata) · vector databases ([LanceDB](https://github.com/lance-format/lancedb) is built on Lance).
 
 ---
 
@@ -361,7 +361,7 @@ result = pl.scan_csv("huge.csv").filter(pl.col('revenue') > 1000).group_by('coun
 
 ## Async Runtime & I/O
 
-### [Monoio](https://github.com/bytedance/monoio) `Rust` · ByteDance · [blog post](https://www.bytecamp.net/monoio/)
+### [Monoio](https://github.com/monoio-rs/monoio) `Rust` · ByteDance · [blog post](https://www.bytecamp.net/monoio/)
 
 > Replaces **[`Tokio`](https://github.com/tokio-rs/tokio)** on Linux throughput workloads → **3× faster on 16 cores**
 
@@ -462,7 +462,7 @@ export default app  // Works on: CF Workers · Bun · Deno · Node · Lambda
 
 ## Message Queues
 
-### [Iggy.rs](https://github.com/iggy-rs/iggy) `Rust` · Apache License · [docs](https://docs.iggy.rs/)
+### [Iggy.rs](https://github.com/apache/iggy) `Rust` · Apache License · [docs](https://docs.iggy.rs/)
 
 > Replaces **[`Apache Kafka`](https://kafka.apache.org/)** → **5M+ msg/s · sub-ms P99 · single binary**
 
@@ -497,7 +497,7 @@ Use when: existing Kafka tooling (connectors, Schema Registry, Kafka Streams) mu
 
 ---
 
-### [Aeron](https://github.com/real-logic/aeron) `C++/Java` · [latency numbers](https://github.com/real-logic/aeron/wiki/Performance-Testing)
+### [Aeron](https://github.com/aeron-io/aeron) `C++/Java` · [latency numbers](https://github.com/aeron-io/aeron/wiki/Performance-Testing)
 
 > **29µs P99 · 4.7M msg/s** · kernel-bypass UDP · HFT gold standard
 
@@ -765,7 +765,7 @@ ORDER BY match_score DESC LIMIT 10;
 **Why NOT MongoDB:** Mongo added transactions late, graph never, vector as an afterthought. SurrealDB was designed for all of these from day one. And Mongo's query language is a JSON horror, SurrealQL reads like SQL.
 
 #### Top alternatives if SurrealDB is wrong for you
-1. **[EdgeDB](https://github.com/edgedb/edgedb)** `Python/Rust` `15K ⭐`, Postgres-backed, typed schema, beautiful query language. Best if you want migrations + type safety + Postgres reliability. Trade-off: no native graph, no vector.
+1. **[EdgeDB](https://github.com/geldata/gel)** `Python/Rust` `15K ⭐`, Postgres-backed, typed schema, beautiful query language. Best if you want migrations + type safety + Postgres reliability. Trade-off: no native graph, no vector.
 2. **[PocketBase](https://github.com/pocketbase/pocketbase)** `Go` `44K ⭐`, Single binary, SQLite-backed, REST + realtime built-in. Best for solo projects and prototypes. Trade-off: not for multi-node production.
 
 **AHA moment:** A startup replaced 4 services (PostgreSQL + Redis + Elasticsearch + Neo4j) with SurrealDB. Infra cost: $2,400/month → $140/month. Query latency dropped because no more network hops between services.
@@ -851,7 +851,7 @@ results = client.search(
 
 ---
 
-### [LanceDB](https://github.com/lancedb/lancedb) `Rust` `6K ` · [docs](https://lancedb.github.io/lancedb/) · [paper](https://arxiv.org/html/2504.15247v1)
+### [LanceDB](https://github.com/lance-format/lancedb) `Rust` `6K ` · [docs](https://lancedb.github.io/lancedb/) · [paper](https://arxiv.org/html/2504.15247v1)
 
 > **Serverless vector database on object storage.** No server to run. Data lives in S3/GCS/local as Lance files (columnar, like Parquet for ML). Sub-second vector search on 10M vectors from S3.
 
@@ -859,7 +859,7 @@ results = client.search(
 
 #### Top alternatives
 1. **[Qdrant](https://qdrant.tech)**, better for multi-user production server deployments with complex filtering.
-2. **[DuckDB + vss extension](https://github.com/duckdb/duckdb_vss)**, if you're already in DuckDB for analytics, add vector search without another service.
+2. **[DuckDB + vss extension](https://github.com/duckdb/duckdb-vss)**, if you're already in DuckDB for analytics, add vector search without another service.
 
 ---
 
@@ -965,11 +965,11 @@ npm create vite@latest my-app
 
 #### Top alternatives
 1. **[Farm](https://github.com/farm-fe/farm)** `Rust` `5.5K ⭐`, Vite-compatible Rust bundler, drop-in alternative for performance-critical setups. Builds 19K modules in 1.4s. Best if you want Vite compatibility but even more build speed.
-2. **[Turbopack](https://github.com/vercel/turbo)** `Rust`, Vercel's bundler, integrated into Next.js 15. Comparable speed to Rolldown. Trade-off: Next.js only, not standalone.
+2. **[Turbopack](https://github.com/vercel/turborepo)** `Rust`, Vercel's bundler, integrated into Next.js 15. Comparable speed to Rolldown. Trade-off: Next.js only, not standalone.
 
 ---
 
-### [Rolldown](https://github.com/rolldown-rs/rolldown) `Rust` `13.3K ` · [docs](https://rolldown.rs) · [benchmarks](https://rolldown.rs/#benchmarks)
+### [Rolldown](https://github.com/rolldown/rolldown) `Rust` `13.3K ` · [docs](https://rolldown.rs) · [benchmarks](https://rolldown.rs/#benchmarks)
 
 > **The bundler that unified esbuild + Rollup.** Rust-based, Rollup-API-compatible, esbuild-speed. Now the default engine inside Vite 8. Use directly for library builds, CLI tools, and non-Vite projects.
 
@@ -1041,7 +1041,7 @@ rustflags = ["-C", "link-arg=-fuse-ld=mold"]
 
 #### Top alternatives
 1. **[lld](https://lld.llvm.org)** `C++`, LLVM's linker. Works on macOS + Linux. 4× faster than GNU ld. Good default upgrade before considering mold.
-2. **[wild](https://github.com/davidlattimore/wild)** `Rust` `4K ⭐`, New Rust linker, still experimental. Aims to be even faster than mold for incremental Rust builds. Watch 2026.
+2. **[wild](https://github.com/wild-linker/wild)** `Rust` `4K ⭐`, New Rust linker, still experimental. Aims to be even faster than mold for incremental Rust builds. Watch 2026.
 
 **AHA moment:** A Rust backend team running `cargo build` in CI dropped from 8 min 40s → 2 min 10s by adding 3 lines to `.cargo/config.toml`. No code changes. No new hardware.
 
@@ -1263,15 +1263,15 @@ CRYPTO_TLS_FIPS → aws-lc-rs      | replaces: openssl       | gain: FIPS 140-3,
 
 | Tool | Stars | Status | Why it matters |
 |------|:-----:|--------|----------------|
-| [Vortex](https://github.com/spiraldb/vortex) |, | Prototype | Adaptive per-column encoding → 10× Parquet compression ratio |
+| [Vortex](https://github.com/vortex-data/vortex) |, | Prototype | Adaptive per-column encoding → 10× Parquet compression ratio |
 | [rkyv](https://github.com/rkyv/rkyv) | `5.5K` | Stable | 200% throughput, 65% memory reduction, zero-copy Rust |
 | [Glaze](https://github.com/stephenberry/glaze) | `1.5K` | Active | Claims to beat simdjson; early but promising benchmarks |
 | [Fjall 3.0](https://github.com/fjall-rs/fjall) | `1K` | ✅ Jan 2026 | Pure-Rust RocksDB replacement hits v3.0 stable |
 | [sonic-go](https://github.com/bytedance/sonic) | `7K` | Active | SIMD-JSON for Go, ByteDance's port of the sonic approach |
-| [iggy.rs v1.0](https://github.com/iggy-rs/iggy) | `2K` | Active | Approaching stable API; watch for v1.0 production declaration |
+| [iggy.rs v1.0](https://github.com/apache/iggy) | `2K` | Active | Approaching stable API; watch for v1.0 production declaration |
 | [Pingap](https://github.com/vicanso/pingap) | `3K` | Active | Pingora-based reverse proxy with config-driven management |
 | [DataFusion Comet](https://github.com/apache/datafusion-comet) | `1K` | Active | Spark plugin that accelerates Spark with DataFusion, gradual migration path |
-| [wild linker](https://github.com/davidlattimore/wild) | `4K` | Active | New Rust-native linker, may beat mold for incremental Rust builds |
+| [wild linker](https://github.com/wild-linker/wild) | `4K` | Active | New Rust-native linker, may beat mold for incremental Rust builds |
 | [oxlint](https://github.com/oxc-project/oxc) | `13K` | Active | 50-100× faster ESLint; catching up fast on rule coverage |
 | [OXC bundler](https://github.com/oxc-project/oxc) | `20.4K` | Active | Full Rust JS toolchain (parser+linter+formatter+bundler), long-term Rolldown rival |
 | [Farm](https://github.com/farm-fe/farm) | `5.5K` | ✅ Stable | Vite-compatible Rust bundler, builds 19K modules in 1.4s |
