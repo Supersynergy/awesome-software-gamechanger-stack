@@ -1,6 +1,6 @@
 # Awesome Software Gamechanger Stack 2026
 
-![Awesome Software Stack](assets/cover.png)
+![Awesome Software Gamechanger Stack](assets/cover.png)
 
 **🧭 Explore:** [Contents](#contents) · [Decision matrix](#decision-matrix) · [Agent query API](#agent-query-api) · [Methodology](#methodology)
 
