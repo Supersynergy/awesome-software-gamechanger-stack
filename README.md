@@ -1,7 +1,11 @@
 # Awesome Software Gamechanger Stack 2026
 
+![Awesome Software Stack](assets/cover.png)
+
+**🧭 Explore:** [Contents](#contents) · [Decision matrix](#decision-matrix) · [Agent query API](#agent-query-api) · [Methodology](#methodology)
+
 > **Drop legacy tools. Benchmarks, not vibes.**
-> Curated from [18,000+ GitHub repos](https://github.com/rust-unofficial/awesome-rust) · 11 research agents · March 2026
+> Research snapshot from March 2026. Consult linked sources for benchmark conditions and current project status.
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![Tools](https://img.shields.io/badge/tools-31%20gamechangers-blue)](#decision-matrix)
