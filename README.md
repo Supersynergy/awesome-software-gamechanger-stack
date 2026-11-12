@@ -32,55 +32,157 @@ Every entry here has a story like that. Let's go.
 
 ## TL;DR: Top 15 Drops Right Now
 
-| Drop this | Use this instead | Real gain |
-|-----------|-----------------|-----------|
-| `serde_json` | [sonic-rs] | P99 cut in half · 1.5–2× parse speed |
-| `Nginx` | [Pingora] | −60% CPU · −70% RAM at Cloudflare scale |
-| `Apache Kafka` | [Iggy.rs] | 10× throughput · sub-ms P99 · no JVM |
-| `Elasticsearch` (logs) | [OpenObserve] | 140× less storage · S3 backend |
-| `pandas` | [Polars] or [DuckDB] | 47min → 4min ETL, real case |
-| `pip + virtualenv + poetry` | [uv] | 100× faster · one Rust binary |
-| `flake8 + black + isort` | [Ruff] | 300K lines linted in 0.3s |
-| `npm + webpack` | [Bun] | 25× faster install · 4× faster startup |
-| `Rollup + esbuild` | [Rolldown] | 25× faster · unified Rust · Vite 8 default |
-| `Postgres + Redis + Mongo` | [SurrealDB] | one binary · graph + vector + SQL |
-| `Pinecone` | [Qdrant] | 4× faster filtered search · self-hostable |
-| `Prometheus` (at scale) | [VictoriaMetrics] | 7× compression · no cardinality limits |
-| `Parquet` (ML/AI) | [Lance] | 100× faster random access (not a typo) |
-| `Apache Spark` | [DataFusion] | SIGMOD 2024 winner · embeds in 1 binary |
-| `SHA-256` | [BLAKE3] | 4–10× faster · parallelizable |
-| `GNU ld linker` | [mold] | 8× faster link time · 3 lines to adopt |
+<details>
+<summary><strong>📋 Show 16 entries</strong></summary>
+
+- **`serde_json`**<br>
+  Use this instead: [sonic-rs]<br>
+  Real gain: P99 cut in half · 1.5–2× parse speed
+
+- **`Nginx`**<br>
+  Use this instead: [Pingora]<br>
+  Real gain: −60% CPU · −70% RAM at Cloudflare scale
+
+- **`Apache Kafka`**<br>
+  Use this instead: [Iggy.rs]<br>
+  Real gain: 10× throughput · sub-ms P99 · no JVM
+
+- **`Elasticsearch` (logs)**<br>
+  Use this instead: [OpenObserve]<br>
+  Real gain: 140× less storage · S3 backend
+
+- **`pandas`**<br>
+  Use this instead: [Polars] or [DuckDB]<br>
+  Real gain: 47min → 4min ETL, real case
+
+- **`pip + virtualenv + poetry`**<br>
+  Use this instead: [uv]<br>
+  Real gain: 100× faster · one Rust binary
+
+- **`flake8 + black + isort`**<br>
+  Use this instead: [Ruff]<br>
+  Real gain: 300K lines linted in 0.3s
+
+- **`npm + webpack`**<br>
+  Use this instead: [Bun]<br>
+  Real gain: 25× faster install · 4× faster startup
+
+- **`Rollup + esbuild`**<br>
+  Use this instead: [Rolldown]<br>
+  Real gain: 25× faster · unified Rust · Vite 8 default
+
+- **`Postgres + Redis + Mongo`**<br>
+  Use this instead: [SurrealDB]<br>
+  Real gain: one binary · graph + vector + SQL
+
+- **`Pinecone`**<br>
+  Use this instead: [Qdrant]<br>
+  Real gain: 4× faster filtered search · self-hostable
+
+- **`Prometheus` (at scale)**<br>
+  Use this instead: [VictoriaMetrics]<br>
+  Real gain: 7× compression · no cardinality limits
+
+- **`Parquet` (ML/AI)**<br>
+  Use this instead: [Lance]<br>
+  Real gain: 100× faster random access (not a typo)
+
+- **`Apache Spark`**<br>
+  Use this instead: [DataFusion]<br>
+  Real gain: SIGMOD 2024 winner · embeds in 1 binary
+
+- **`SHA-256`**<br>
+  Use this instead: [BLAKE3]<br>
+  Real gain: 4–10× faster · parallelizable
+
+- **`GNU ld linker`**<br>
+  Use this instead: [mold]<br>
+  Real gain: 8× faster link time · 3 lines to adopt
+
+</details>
+
 
 ---
 
 ## Contents
 
-| Category | Quick pick |
-|----------|-----------|
-| [💥 AHA Moments](#aha-moments-real-world-impact) | Before/after stories |
-| [🔥 JSON Parsing](#json-parsing) | sonic-rs (Rust) · simdjson (C++) · yyjson (C) |
-| [📦 Serialization](#serialization) | Cap'n Proto (RPC) · rkyv (Rust) · FlatBuffers (IoT) |
-| [🗄️ Query & Columnar](#query-engines--columnar) | DuckDB · DataFusion · Lance · Polars |
-| [🛢️ Databases, Multi-Model & Specialized](#databases-multi-model--specialized) | SurrealDB · TigerBeetle · Turso · Neon · ClickHouse |
-| [🧠 Vector Databases](#vector-databases) | Qdrant · LanceDB |
-| [⚡ Async & I/O](#async-runtime--io) | Monoio (Linux 3×) · tokio-quiche (HTTP/3) |
-| [🌐 HTTP](#http-servers--proxies) | Pingora (proxy) · Hono (edge API) |
-| [📨 Message Queues](#message-queues) | Iggy.rs · Redpanda · Aeron |
-| [🗃️ KV Stores](#key-value-stores) | Fjall · SpeedB · LMDB |
-| [🔍 Full-Text Search](#full-text-search) | Tantivy · TypeSense |
-| [🧠 Memory Allocators](#memory-allocators) | mimalloc · snmalloc |
-| [#️⃣ Hash Functions](#hash-functions) | rapidhash · BLAKE3 · AHash |
-| [🗜️ Compression](#compression) | LZ4 · zstd · Brotli |
-| [🔎 Regex](#regex--string-search) | Hyperscan · RE2 · Teddy |
-| [🔐 Cryptography](#cryptography) | aws-lc-rs · BLAKE3 |
-| [🐍 Python Toolchain](#python-toolchain) | uv · Ruff · Maturin |
-| [⚡ JS/TS Runtime & Build](#jsts-runtime--build) | Bun · Vite · Biome |
-| [🔗 Linkers & Build Speed](#linkers--build-speed) | mold · lld |
-| [📊 Observability & Metrics](#observability--metrics) | VictoriaMetrics · Pyroscope · OpenObserve |
-| [🖥️ Frontend Gamechangers](#frontend-gamechangers) | Astro · Svelte 5 · SolidJS |
-| [🎯 Decision Matrix](#decision-matrix) | Agent-ready lookup |
-| [🏆 The 2026 Stack](#the-2026-stack) | Full recommended stack |
-| [📊 Emerging Tools](#emerging-watch-2026) | Watch list |
+<details>
+<summary><strong>📋 Show 24 entries</strong></summary>
+
+- **[💥 AHA Moments](#aha-moments-real-world-impact)**<br>
+  Quick pick: Before/after stories
+
+- **[🔥 JSON Parsing](#json-parsing)**<br>
+  Quick pick: sonic-rs (Rust) · simdjson (C++) · yyjson (C)
+
+- **[📦 Serialization](#serialization)**<br>
+  Quick pick: Cap'n Proto (RPC) · rkyv (Rust) · FlatBuffers (IoT)
+
+- **[🗄️ Query & Columnar](#query-engines--columnar)**<br>
+  Quick pick: DuckDB · DataFusion · Lance · Polars
+
+- **[🛢️ Databases, Multi-Model & Specialized](#databases-multi-model--specialized)**<br>
+  Quick pick: SurrealDB · TigerBeetle · Turso · Neon · ClickHouse
+
+- **[🧠 Vector Databases](#vector-databases)**<br>
+  Quick pick: Qdrant · LanceDB
+
+- **[⚡ Async & I/O](#async-runtime--io)**<br>
+  Quick pick: Monoio (Linux 3×) · tokio-quiche (HTTP/3)
+
+- **[🌐 HTTP](#http-servers--proxies)**<br>
+  Quick pick: Pingora (proxy) · Hono (edge API)
+
+- **[📨 Message Queues](#message-queues)**<br>
+  Quick pick: Iggy.rs · Redpanda · Aeron
+
+- **[🗃️ KV Stores](#key-value-stores)**<br>
+  Quick pick: Fjall · SpeedB · LMDB
+
+- **[🔍 Full-Text Search](#full-text-search)**<br>
+  Quick pick: Tantivy · TypeSense
+
+- **[🧠 Memory Allocators](#memory-allocators)**<br>
+  Quick pick: mimalloc · snmalloc
+
+- **[#️⃣ Hash Functions](#hash-functions)**<br>
+  Quick pick: rapidhash · BLAKE3 · AHash
+
+- **[🗜️ Compression](#compression)**<br>
+  Quick pick: LZ4 · zstd · Brotli
+
+- **[🔎 Regex](#regex--string-search)**<br>
+  Quick pick: Hyperscan · RE2 · Teddy
+
+- **[🔐 Cryptography](#cryptography)**<br>
+  Quick pick: aws-lc-rs · BLAKE3
+
+- **[🐍 Python Toolchain](#python-toolchain)**<br>
+  Quick pick: uv · Ruff · Maturin
+
+- **[⚡ JS/TS Runtime & Build](#jsts-runtime--build)**<br>
+  Quick pick: Bun · Vite · Biome
+
+- **[🔗 Linkers & Build Speed](#linkers--build-speed)**<br>
+  Quick pick: mold · lld
+
+- **[📊 Observability & Metrics](#observability--metrics)**<br>
+  Quick pick: VictoriaMetrics · Pyroscope · OpenObserve
+
+- **[🖥️ Frontend Gamechangers](#frontend-gamechangers)**<br>
+  Quick pick: Astro · Svelte 5 · SolidJS
+
+- **[🎯 Decision Matrix](#decision-matrix)**<br>
+  Quick pick: Agent-ready lookup
+
+- **[🏆 The 2026 Stack](#the-2026-stack)**<br>
+  Quick pick: Full recommended stack
+
+- **[📊 Emerging Tools](#emerging-watch-2026)**<br>
+  Quick pick: Watch list
+
+</details>
+
 
 ---
 
@@ -166,10 +268,21 @@ Mozilla + Cloudflare measured (2024): **58% of heap allocations in production Ru
 sonic-rs = "0.3"
 ```
 
-| Benchmark | sonic-rs | simd-json | serde_json |
-|-----------|:--------:|:---------:|:----------:|
-| Twitter parse | **796 µs** | 1,061 µs | ~3,000 µs |
-| Canada parse | **3.9 ms** | 5.2 ms |, |
+<details>
+<summary><strong>📋 Show 2 entries</strong></summary>
+
+- **Twitter parse**<br>
+  sonic-rs: **796 µs**<br>
+  simd-json: 1,061 µs<br>
+  serde_json: ~3,000 µs
+
+- **Canada parse**<br>
+  sonic-rs: **3.9 ms**<br>
+  simd-json: 5.2 ms<br>
+  serde_json: ,
+
+</details>
+
 
 **Why faster:** Parses directly into your struct, no "tape" intermediate representation, no intermediate allocation. SIMD on x86-64 + aarch64 natively. Battle-tested at ByteDance (TikTok backend).
 
@@ -210,10 +323,21 @@ let v: MyStruct = sonic_rs::from_str(&s)?;
 
 > Replaces **[`cJSON`](https://github.com/DaveGamble/cJSON)**, **[`jansson`](https://github.com/akheron/jansson)** → **2.3× faster stringify · zero dependencies**
 
-| | yyjson | simdjson | RapidJSON |
-|--|:------:|:--------:|:---------:|
-| Twitter parse | 1.72 GB/s | 1.52 GB/s | 0.38 GB/s |
-| **Stringify** | **1.42 GB/s** | 0.61 GB/s | 0.32 GB/s |
+<details>
+<summary><strong>📋 Show 2 entries</strong></summary>
+
+- **Twitter parse**<br>
+  yyjson: 1.72 GB/s<br>
+  simdjson: 1.52 GB/s<br>
+  RapidJSON: 0.38 GB/s
+
+- **Stringify**<br>
+  yyjson: **1.42 GB/s**<br>
+  simdjson: 0.61 GB/s<br>
+  RapidJSON: 0.32 GB/s
+
+</details>
+
 
 Zero dependencies. No C++ compiler. Single `.c` file. Embedded/IoT-ready. The stringify win (2.3×) is decisive for write-heavy workloads like log shipping.
 
@@ -233,12 +357,35 @@ Zero dependencies. No C++ compiler. Single `.c` file. Embedded/IoT-ready. The st
 
 Wire format = memory format. Reading a Cap'n Proto message = reading directly from the network buffer. No copy, no parse.
 
-| Framework | Zero-Copy | Deser Speed | Built-in RPC | Wire Size |
-|-----------|:---------:|:-----------:|:------------:|:---------:|
-| **Cap'n Proto** | ✅ | **0 ns** | ✅ | Medium |
-| [FlatBuffers] | ✅ | Near-zero | ❌ | Large |
-| Protobuf | ❌ | ~200 ns/field | ❌ | **Smallest** |
-| MessagePack | ❌ | Medium | ❌ | Small |
+<details>
+<summary><strong>📋 Show 4 entries</strong></summary>
+
+- **Cap'n Proto**<br>
+  Zero-Copy: ✅<br>
+  Deser Speed: **0 ns**<br>
+  Built-in RPC: ✅<br>
+  Wire Size: Medium
+
+- **[FlatBuffers]**<br>
+  Zero-Copy: ✅<br>
+  Deser Speed: Near-zero<br>
+  Built-in RPC: ❌<br>
+  Wire Size: Large
+
+- **Protobuf**<br>
+  Zero-Copy: ❌<br>
+  Deser Speed: ~200 ns/field<br>
+  Built-in RPC: ❌<br>
+  Wire Size: **Smallest**
+
+- **MessagePack**<br>
+  Zero-Copy: ❌<br>
+  Deser Speed: Medium<br>
+  Built-in RPC: ❌<br>
+  Wire Size: Small
+
+</details>
+
 
 #### Why NOT Protobuf for latency-critical RPC
 - Every `proto.Unmarshal()` = allocations + copy of every field
@@ -369,11 +516,23 @@ result = pl.scan_csv("huge.csv").filter(pl.col('revenue') > 1000).group_by('coun
 
 > Replaces **[`Tokio`](https://github.com/tokio-rs/tokio)** on Linux throughput workloads → **3× faster on 16 cores**
 
-| Cores | vs Tokio | vs NGINX |
-|:-----:|:--------:|:--------:|
-| 4 | +2× |, |
-| 16 | **+3×** | **+20%** |
-| RPC throughput | +26% |, |
+<details>
+<summary><strong>📋 Show 3 entries</strong></summary>
+
+- **4**<br>
+  vs Tokio: +2×<br>
+  vs NGINX: ,
+
+- **16**<br>
+  vs Tokio: **+3×**<br>
+  vs NGINX: **+20%**
+
+- **RPC throughput**<br>
+  vs Tokio: +26%<br>
+  vs NGINX: ,
+
+</details>
+
 
 **How:** Thread-per-core model + io_uring native. Each CPU core has its own event loop, no cross-thread work stealing overhead. Tokio uses a work-stealing scheduler (great for mixed workloads, overhead for pure I/O).
 
@@ -385,14 +544,35 @@ result = pl.scan_csv("huge.csv").filter(pl.col('revenue') > 1000).group_by('coun
 
 ### io_uring vs epoll: the syscall revolution
 
-| | io_uring | epoll |
-|--|:--------:|:-----:|
-| Syscall overhead | **Batch (1 for N ops)** | 1 per op |
-| 0-syscall polling | ✅ (busy-wait mode) | ❌ |
-| Max IOPS | **Millions** | ~Hundreds of thousands |
-| Fixed buffers | ✅ (zero-copy) | ❌ |
-| Portability | Linux 5.1+ only | Everywhere |
-| Production maturity | Growing fast | Decades |
+<details>
+<summary><strong>📋 Show 6 entries</strong></summary>
+
+- **Syscall overhead**<br>
+  io_uring: **Batch (1 for N ops)**<br>
+  epoll: 1 per op
+
+- **0-syscall polling**<br>
+  io_uring: ✅ (busy-wait mode)<br>
+  epoll: ❌
+
+- **Max IOPS**<br>
+  io_uring: **Millions**<br>
+  epoll: ~Hundreds of thousands
+
+- **Fixed buffers**<br>
+  io_uring: ✅ (zero-copy)<br>
+  epoll: ❌
+
+- **Portability**<br>
+  io_uring: Linux 5.1+ only<br>
+  epoll: Everywhere
+
+- **Production maturity**<br>
+  io_uring: Growing fast<br>
+  epoll: Decades
+
+</details>
+
 
 **Reference:** [io_uring deep dive by Jens Axboe (author)](https://kernel.dk/io_uring.pdf)
 
@@ -416,13 +596,31 @@ Cloudflare's battle-hardened `quiche` QUIC implementation + Tokio async runtime.
 
 > Replaces **[`Nginx`](https://nginx.org/)** → **−60% CPU · −70% RAM · 1 trillion req/day**
 
-| | Pingora | Nginx |
-|--|:-------:|:-----:|
-| Global scale | **1T req/day** |, |
-| CPU usage | **−60%** | baseline |
-| RAM usage | **−70%** | baseline |
-| P50 latency | **5ms improvement** | baseline |
-| Connection reuse | Shared pool across workers | Per-worker (no sharing) |
+<details>
+<summary><strong>📋 Show 5 entries</strong></summary>
+
+- **Global scale**<br>
+  Pingora: **1T req/day**<br>
+  Nginx: ,
+
+- **CPU usage**<br>
+  Pingora: **−60%**<br>
+  Nginx: baseline
+
+- **RAM usage**<br>
+  Pingora: **−70%**<br>
+  Nginx: baseline
+
+- **P50 latency**<br>
+  Pingora: **5ms improvement**<br>
+  Nginx: baseline
+
+- **Connection reuse**<br>
+  Pingora: Shared pool across workers<br>
+  Nginx: Per-worker (no sharing)
+
+</details>
+
 
 **The reason Nginx wastes memory:** Nginx spawns a process per worker, each maintaining its own connection pool. Pingora uses async Rust, all workers share one connection pool. For a busy server making 10M upstream connections/day, Nginx creates each connection fresh. Pingora reuses them → 999× fewer TCP handshakes observed in Cloudflare's data.
 
@@ -470,13 +668,31 @@ export default app  // Works on: CF Workers · Bun · Deno · Node · Lambda
 
 > Replaces **[`Apache Kafka`](https://kafka.apache.org/)** → **5M+ msg/s · sub-ms P99 · single binary**
 
-| | Iggy.rs | Apache Kafka |
-|--|:-------:|:------------:|
-| Throughput | **5M+ msg/s** | ~500K msg/s |
-| P99 Latency | **<1 ms** | ~300 ms |
-| Memory | **~200MB** | ~6GB per broker |
-| Operations | **1 binary** | ZooKeeper + JVM + 3+ brokers |
-| Monthly infra cost (est.) | **~$200** | **~$8,000** |
+<details>
+<summary><strong>📋 Show 5 entries</strong></summary>
+
+- **Throughput**<br>
+  Iggy.rs: **5M+ msg/s**<br>
+  Apache Kafka: ~500K msg/s
+
+- **P99 Latency**<br>
+  Iggy.rs: **<1 ms**<br>
+  Apache Kafka: ~300 ms
+
+- **Memory**<br>
+  Iggy.rs: **~200MB**<br>
+  Apache Kafka: ~6GB per broker
+
+- **Operations**<br>
+  Iggy.rs: **1 binary**<br>
+  Apache Kafka: ZooKeeper + JVM + 3+ brokers
+
+- **Monthly infra cost (est.)**<br>
+  Iggy.rs: **~$200**<br>
+  Apache Kafka: **~$8,000**
+
+</details>
+
 
 #### Why NOT Kafka in 2026 (unless you're Netflix)
 - JVM startup: 30–90s cold start
@@ -561,12 +777,27 @@ MMAP-based B-tree. The OS page cache **is** the read cache, no double-buffering.
 
 > Replaces **[`Elasticsearch`](https://github.com/elastic/elasticsearch)**, **[`Lucene`](https://lucene.apache.org/)** → **6.5× faster · 56% less RAM · embeds in your binary**
 
-| | Tantivy | Elasticsearch |
-|--|:-------:|:-------------:|
-| Query time (1M docs) | **0.8 ms** | 5.2 ms |
-| Indexing speed | **45K docs/s** | 12K docs/s |
-| RAM (1M docs) | **2.1 GB** | 4.8 GB |
-| Deployment | **1 library** | JVM cluster |
+<details>
+<summary><strong>📋 Show 4 entries</strong></summary>
+
+- **Query time (1M docs)**<br>
+  Tantivy: **0.8 ms**<br>
+  Elasticsearch: 5.2 ms
+
+- **Indexing speed**<br>
+  Tantivy: **45K docs/s**<br>
+  Elasticsearch: 12K docs/s
+
+- **RAM (1M docs)**<br>
+  Tantivy: **2.1 GB**<br>
+  Elasticsearch: 4.8 GB
+
+- **Deployment**<br>
+  Tantivy: **1 library**<br>
+  Elasticsearch: JVM cluster
+
+</details>
+
 
 #### Why NOT Elasticsearch in 2026
 - Requires JVM → minimum 2–4GB heap just to start
@@ -670,12 +901,35 @@ let mut map: AHashMap<String, u64> = AHashMap::new(); // Done.
 
 ## Compression
 
-| Use Case | Tool | Decomp Speed | Ratio | When to pick |
-|----------|------|:------------:|:-----:|--------------|
-| **Realtime / sub-ms** | [LZ4](https://github.com/lz4/lz4) | **3.5 GB/s** | 1.12× | Streaming, hot paths, Kafka messages |
-| **Network / storage** | [zstd](https://github.com/facebook/zstd) | 1 GB/s | **2.8×** | S3, backups, network transfer |
-| **HTTP responses** | [Brotli](https://github.com/google/brotli) | 0.4 GB/s | **Best** | Static assets, CDN responses |
-| **Game assets** | [Oodle Kraken](http://www.radgametools.com/oodle.htm) | ~2 GB/s | ~2.5× | AAA games industry standard |
+<details>
+<summary><strong>📋 Show 4 entries</strong></summary>
+
+- **Realtime / sub-ms**<br>
+  Tool: [LZ4](https://github.com/lz4/lz4)<br>
+  Decomp Speed: **3.5 GB/s**<br>
+  Ratio: 1.12×<br>
+  When to pick: Streaming, hot paths, Kafka messages
+
+- **Network / storage**<br>
+  Tool: [zstd](https://github.com/facebook/zstd)<br>
+  Decomp Speed: 1 GB/s<br>
+  Ratio: **2.8×**<br>
+  When to pick: S3, backups, network transfer
+
+- **HTTP responses**<br>
+  Tool: [Brotli](https://github.com/google/brotli)<br>
+  Decomp Speed: 0.4 GB/s<br>
+  Ratio: **Best**<br>
+  When to pick: Static assets, CDN responses
+
+- **Game assets**<br>
+  Tool: [Oodle Kraken](http://www.radgametools.com/oodle.htm)<br>
+  Decomp Speed: ~2 GB/s<br>
+  Ratio: ~2.5×<br>
+  When to pick: AAA games industry standard
+
+</details>
+
 
 **Why NOT gzip in 2026:** zstd compresses better AND decompresses faster than gzip. The only reason to use gzip is HTTP/1.1 clients that don't support Brotli/zstd (increasingly rare).
 
@@ -979,12 +1233,27 @@ npm create vite@latest my-app
 
 > **The bundler that unified esbuild + Rollup.** Rust-based, Rollup-API-compatible, esbuild-speed. Now the default engine inside Vite 8. Use directly for library builds, CLI tools, and non-Vite projects.
 
-| Bundler | 19K modules | Notes |
-|---------|:-----------:|-------|
-| **Rolldown** | **1.61s** | Vite 8 default |
-| esbuild | 1.70s | Go, no Rollup plugins |
-| Rspack | 4.07s | Webpack-compatible |
-| Rollup + esbuild | 40.10s | Old Vite 7 internals |
+<details>
+<summary><strong>📋 Show 4 entries</strong></summary>
+
+- **Rolldown**<br>
+  19K modules: **1.61s**<br>
+  Notes: Vite 8 default
+
+- **esbuild**<br>
+  19K modules: 1.70s<br>
+  Notes: Go, no Rollup plugins
+
+- **Rspack**<br>
+  19K modules: 4.07s<br>
+  Notes: Webpack-compatible
+
+- **Rollup + esbuild**<br>
+  19K modules: 40.10s<br>
+  Notes: Old Vite 7 internals
+
+</details>
+
 
 **Why NOT esbuild alone:** esbuild is fast but has no tree-shaking for complex dynamic imports and no Rollup plugin ecosystem. Rolldown inherits all Rollup plugins AND esbuild speed.
 
@@ -1267,26 +1536,101 @@ CRYPTO_TLS_FIPS → aws-lc-rs      | replaces: openssl       | gain: FIPS 140-3,
 
 ## Emerging: Watch 2026
 
-| Tool | Stars | Status | Why it matters |
-|------|:-----:|--------|----------------|
-| [Vortex](https://github.com/vortex-data/vortex) |, | Prototype | Adaptive per-column encoding → 10× Parquet compression ratio |
-| [rkyv](https://github.com/rkyv/rkyv) | `5.5K` | Stable | 200% throughput, 65% memory reduction, zero-copy Rust |
-| [Glaze](https://github.com/stephenberry/glaze) | `1.5K` | Active | Claims to beat simdjson; early but promising benchmarks |
-| [Fjall 3.0](https://github.com/fjall-rs/fjall) | `1K` | ✅ Jan 2026 | Pure-Rust RocksDB replacement hits v3.0 stable |
-| [sonic-go](https://github.com/bytedance/sonic) | `7K` | Active | SIMD-JSON for Go, ByteDance's port of the sonic approach |
-| [iggy.rs v1.0](https://github.com/apache/iggy) | `2K` | Active | Approaching stable API; watch for v1.0 production declaration |
-| [Pingap](https://github.com/vicanso/pingap) | `3K` | Active | Pingora-based reverse proxy with config-driven management |
-| [DataFusion Comet](https://github.com/apache/datafusion-comet) | `1K` | Active | Spark plugin that accelerates Spark with DataFusion, gradual migration path |
-| [wild linker](https://github.com/wild-linker/wild) | `4K` | Active | New Rust-native linker, may beat mold for incremental Rust builds |
-| [oxlint](https://github.com/oxc-project/oxc) | `13K` | Active | 50-100× faster ESLint; catching up fast on rule coverage |
-| [OXC bundler](https://github.com/oxc-project/oxc) | `20.4K` | Active | Full Rust JS toolchain (parser+linter+formatter+bundler), long-term Rolldown rival |
-| [Farm](https://github.com/farm-fe/farm) | `5.5K` | ✅ Stable | Vite-compatible Rust bundler, builds 19K modules in 1.4s |
-| [VitePlus](https://github.com/voidzero-dev/vite-plus) | `~8K` | Active | VoidZero's unified Vite+Rolldown+OXC ecosystem layer |
-| [Rolldown](https://rolldown.rs) | `13.3K` | ✅ Vite 8 | Now the default Vite 8 bundler, Rollup+esbuild unified in Rust |
-| [ty (Astral)](https://github.com/astral-sh/ty) |, | Alpha | Ruff's type checker companion; will challenge mypy/pyright |
-| [Parca](https://github.com/parca-dev/parca) | `4K` | Active | eBPF continuous profiling, zero code instrumentation needed |
-| [RisingWave](https://github.com/risingwavelabs/risingwave) | `8K` | Active | Streaming SQL database, Flink replacement in Rust |
-| [Neon](https://github.com/neondatabase/neon) | `16K` | ✅ GA | Serverless Postgres with git-like branching for DB schemas |
+<details>
+<summary><strong>📋 Show 18 entries</strong></summary>
+
+- **[Vortex](https://github.com/vortex-data/vortex)**<br>
+  Stars: ,<br>
+  Status: Prototype<br>
+  Why it matters: Adaptive per-column encoding → 10× Parquet compression ratio
+
+- **[rkyv](https://github.com/rkyv/rkyv)**<br>
+  Stars: `5.5K`<br>
+  Status: Stable<br>
+  Why it matters: 200% throughput, 65% memory reduction, zero-copy Rust
+
+- **[Glaze](https://github.com/stephenberry/glaze)**<br>
+  Stars: `1.5K`<br>
+  Status: Active<br>
+  Why it matters: Claims to beat simdjson; early but promising benchmarks
+
+- **[Fjall 3.0](https://github.com/fjall-rs/fjall)**<br>
+  Stars: `1K`<br>
+  Status: ✅ Jan 2026<br>
+  Why it matters: Pure-Rust RocksDB replacement hits v3.0 stable
+
+- **[sonic-go](https://github.com/bytedance/sonic)**<br>
+  Stars: `7K`<br>
+  Status: Active<br>
+  Why it matters: SIMD-JSON for Go, ByteDance's port of the sonic approach
+
+- **[iggy.rs v1.0](https://github.com/apache/iggy)**<br>
+  Stars: `2K`<br>
+  Status: Active<br>
+  Why it matters: Approaching stable API; watch for v1.0 production declaration
+
+- **[Pingap](https://github.com/vicanso/pingap)**<br>
+  Stars: `3K`<br>
+  Status: Active<br>
+  Why it matters: Pingora-based reverse proxy with config-driven management
+
+- **[DataFusion Comet](https://github.com/apache/datafusion-comet)**<br>
+  Stars: `1K`<br>
+  Status: Active<br>
+  Why it matters: Spark plugin that accelerates Spark with DataFusion, gradual migration path
+
+- **[wild linker](https://github.com/wild-linker/wild)**<br>
+  Stars: `4K`<br>
+  Status: Active<br>
+  Why it matters: New Rust-native linker, may beat mold for incremental Rust builds
+
+- **[oxlint](https://github.com/oxc-project/oxc)**<br>
+  Stars: `13K`<br>
+  Status: Active<br>
+  Why it matters: 50-100× faster ESLint; catching up fast on rule coverage
+
+- **[OXC bundler](https://github.com/oxc-project/oxc)**<br>
+  Stars: `20.4K`<br>
+  Status: Active<br>
+  Why it matters: Full Rust JS toolchain (parser+linter+formatter+bundler), long-term Rolldown rival
+
+- **[Farm](https://github.com/farm-fe/farm)**<br>
+  Stars: `5.5K`<br>
+  Status: ✅ Stable<br>
+  Why it matters: Vite-compatible Rust bundler, builds 19K modules in 1.4s
+
+- **[VitePlus](https://github.com/voidzero-dev/vite-plus)**<br>
+  Stars: `~8K`<br>
+  Status: Active<br>
+  Why it matters: VoidZero's unified Vite+Rolldown+OXC ecosystem layer
+
+- **[Rolldown](https://rolldown.rs)**<br>
+  Stars: `13.3K`<br>
+  Status: ✅ Vite 8<br>
+  Why it matters: Now the default Vite 8 bundler, Rollup+esbuild unified in Rust
+
+- **[ty (Astral)](https://github.com/astral-sh/ty)**<br>
+  Stars: ,<br>
+  Status: Alpha<br>
+  Why it matters: Ruff's type checker companion; will challenge mypy/pyright
+
+- **[Parca](https://github.com/parca-dev/parca)**<br>
+  Stars: `4K`<br>
+  Status: Active<br>
+  Why it matters: eBPF continuous profiling, zero code instrumentation needed
+
+- **[RisingWave](https://github.com/risingwavelabs/risingwave)**<br>
+  Stars: `8K`<br>
+  Status: Active<br>
+  Why it matters: Streaming SQL database, Flink replacement in Rust
+
+- **[Neon](https://github.com/neondatabase/neon)**<br>
+  Stars: `16K`<br>
+  Status: ✅ GA<br>
+  Why it matters: Serverless Postgres with git-like branching for DB schemas
+
+</details>
+
 
 ---
 
