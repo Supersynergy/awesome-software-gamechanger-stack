@@ -69,7 +69,7 @@ Every entry here has a story like that. Let's go.
 | [🗃️ KV Stores](#key-value-stores) | Fjall · SpeedB · LMDB |
 | [🔍 Full-Text Search](#full-text-search) | Tantivy · TypeSense |
 | [🧠 Memory Allocators](#memory-allocators) | mimalloc · snmalloc |
-| [#️⃣ Hash Functions](#️⃣-hash-functions) | rapidhash · BLAKE3 · AHash |
+| [#️⃣ Hash Functions](#hash-functions) | rapidhash · BLAKE3 · AHash |
 | [🗜️ Compression](#compression) | LZ4 · zstd · Brotli |
 | [🔎 Regex](#regex--string-search) | Hyperscan · RE2 · Teddy |
 | [🔐 Cryptography](#cryptography) | aws-lc-rs · BLAKE3 |
@@ -622,6 +622,8 @@ Uses a "message passing" deallocation model, objects are freed by sending them b
 **Use when:** Actor-style or channel-heavy code where one thread allocates and a different thread frees. Higher memory overhead than mimalloc, but wins on concurrent throughput benchmarks.
 
 ---
+
+<a id="hash-functions"></a>
 
 ## #⃣ Hash Functions
 
