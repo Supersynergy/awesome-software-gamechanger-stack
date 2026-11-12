@@ -1,6 +1,6 @@
 # Awesome Software Gamechanger Stack 2026
 
-![Awesome Software Gamechanger Stack](assets/cover.png)
+<img src="assets/cover.png" alt="Awesome Software Gamechanger Stack" width="300" align="right">
 
 **🧭 Explore:** [Contents](#contents) · [Decision matrix](#decision-matrix) · [Agent query API](#agent-query-api) · [Methodology](#methodology)
 
@@ -10,7 +10,7 @@
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![Tools](https://img.shields.io/badge/tools-31%20gamechangers-blue)](#decision-matrix)
 [![Agent Ready](https://img.shields.io/badge/agent--optimized-✓-brightgreen)](#agent-query-api)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](../../compare)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](https://github.com/Supersynergy/awesome-software-gamechanger-stack/compare)
 [![Last Updated](https://img.shields.io/badge/updated-April%202026-orange)](.)
 
 ---
@@ -1686,7 +1686,7 @@ PR criteria, all four required:
 3. **Clear replacement target** (what legacy tool does it beat, and why)
 4. **Honest "When NOT to use"** section, this is what separates useful lists from hype lists
 
-[Open a PR](../../compare) · [Suggest a tool via Issue](../../issues/new/choose)
+[Open a PR](https://github.com/Supersynergy/awesome-software-gamechanger-stack/compare) · [Suggest a tool via Issue](../../issues/new/choose)
 
 ---
 
