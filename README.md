@@ -1,6 +1,9 @@
+<p align="center">
+  <img src="assets/cover.png" alt="Awesome Software Gamechanger Stack" width="960">
+</p>
+
 # Awesome Software Gamechanger Stack 2026
 
-<img src="assets/cover.png" alt="Awesome Software Gamechanger Stack" width="300" align="right">
 
 **🧭 Explore:** [Contents](#contents) · [Decision matrix](#decision-matrix) · [Agent query API](#agent-query-api) · [Methodology](#methodology)
 
